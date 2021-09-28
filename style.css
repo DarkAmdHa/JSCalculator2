@@ -33,15 +33,17 @@ input {
   -webkit-text-fill-color: rgba(0, 0, 0, 1);
   -webkit-opacity: 1;
 }
+
 .table-container {
   opacity: 0;
   transform: translateX(-500px);
   transition: 1s ease;
   overflow-x: auto;
-  max-width: 1000px;
-  width: 80vw;
+  width: 95%;
+  max-width: 1085px;
   margin-top: 1rem;
   margin-left: 1rem;
+  padding-bottom: 5px;
 }
 .save-pdf {
   opacity: 0;
@@ -53,7 +55,7 @@ input {
 .input-table,
 .responsive-table {
   border: 3px solid black;
-  width: 1000px;
+  width: 1065px;
 }
 
 .responsive-table {
@@ -67,7 +69,7 @@ input {
 #main-table > tbody > tr > td,
 .input-table > tbody > tr > td {
   border-right: 3px solid black;
-  padding: 0 2px;
+  padding: 0 12px;
 }
 
 #main-table th,
@@ -216,6 +218,7 @@ input {
   padding: 0 2rem;
   cursor: pointer;
   font-weight: bold;
+  width: 135px;
 }
 
 .greyed-out {
@@ -266,22 +269,43 @@ input {
 
 .input-container {
   overflow-x: auto;
-  width: 1000px;
-  max-width: 80%;
-  max-width: 1000px;
-  width: 80vw;
+  width: 95%;
+  max-width: 1085px;
   margin-top: 1rem;
   margin-left: 1rem;
+  padding-bottom: 5px;
 }
 
 .input-container .flush:before {
   display: none;
 }
+
+.units-column {
+  min-width: 130px;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  margin-bottom: -5px;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+}
+
 @media print {
   .btn,
   .save-pdf {
     visibility: hidden;
+    display: none;
   }
+
+  .align-center {
+    display: block;
+    justify-content: flex-start;
+  }
+
   .input-container,
   .table-container {
     overflow: visible;
@@ -291,6 +315,8 @@ input {
   }
 }
 
-.units-column {
-  min-width: 110px;
+@media (max-width: 768px) {
+  .align-center {
+    flex-direction: column;
+  }
 }
