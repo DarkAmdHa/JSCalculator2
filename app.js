@@ -65,38 +65,38 @@ function calculateValues(e) {
   let flow6_blm_out2 = ((input[8].value/2)*(blm_EC * blm_flow * 1.15));
   let flow7_blm_out2 = ((input[9].value/2)*(blm_EC * blm_flow * 1.15));
   
-  document.querySelector('.veg1_pA_out2').innerText = veg1_ptA_out2.toFixed(2);
-  document.querySelector(".veg2_pA_out2").innerText = veg2_ptA_out2.toFixed(2);
-  document.querySelector(".veg3_pA_out2").innerText = veg3_ptA_out2.toFixed(2);
-  document.querySelector(".flow1_pA_out2").innerText = flow1_ptA_out2.toFixed(2);
-  document.querySelector(".flow2_pA_out2").innerText = flow2_ptA_out2.toFixed(2);
-  document.querySelector(".flow3_pA_out2").innerText = flow3_ptA_out2.toFixed(2);
-  document.querySelector(".flow4_pA_out2").innerText = flow4_ptA_out2.toFixed(2);
-  document.querySelector(".flow5_pA_out2").innerText = flow5_ptA_out2.toFixed(2);
-  document.querySelector(".flow6_pA_out2").innerText = flow6_ptA_out2.toFixed(2);
-  document.querySelector(".flow7_pA_out2").innerText = flow7_ptA_out2.toFixed(2);
+  document.querySelector('.veg1_pA_out2').value = veg1_ptA_out2.toFixed(2);
+  document.querySelector(".veg2_pA_out2").value = veg2_ptA_out2.toFixed(2);
+  document.querySelector(".veg3_pA_out2").value = veg3_ptA_out2.toFixed(2);
+  document.querySelector(".flow1_pA_out2").value = flow1_ptA_out2.toFixed(2);
+  document.querySelector(".flow2_pA_out2").value = flow2_ptA_out2.toFixed(2);
+  document.querySelector(".flow3_pA_out2").value = flow3_ptA_out2.toFixed(2);
+  document.querySelector(".flow4_pA_out2").value = flow4_ptA_out2.toFixed(2);
+  document.querySelector(".flow5_pA_out2").value = flow5_ptA_out2.toFixed(2);
+  document.querySelector(".flow6_pA_out2").value = flow6_ptA_out2.toFixed(2);
+  document.querySelector(".flow7_pA_out2").value = flow7_ptA_out2.toFixed(2);
   
-  document.querySelector('.veg1_pB_out2').innerText = veg1_ptB_out2.toFixed(2);
-  document.querySelector('.veg2_pB_out2').innerText = veg2_ptB_out2.toFixed(2);
-  document.querySelector('.veg3_pB_out2').innerText = veg3_ptB_out2.toFixed(2);
-  document.querySelector('.flow1_pB_out2').innerText = flow1_ptB_out2.toFixed(2);
-  document.querySelector('.flow2_pB_out2').innerText = flow2_ptB_out2.toFixed(2);
-  document.querySelector('.flow3_pB_out2').innerText = flow3_ptB_out2.toFixed(2);
-  document.querySelector('.flow4_pB_out2').innerText = flow4_ptB_out2.toFixed(2);
-  document.querySelector('.flow5_pB_out2').innerText = flow5_ptB_out2.toFixed(2);
-  document.querySelector('.flow6_pB_out2').innerText = flow6_ptB_out2.toFixed(2);
-  document.querySelector('.flow7_pB_out2').innerText = flow7_ptB_out2.toFixed(2);
+  document.querySelector('.veg1_pB_out2').value = veg1_ptB_out2.toFixed(2);
+  document.querySelector('.veg2_pB_out2').value = veg2_ptB_out2.toFixed(2);
+  document.querySelector('.veg3_pB_out2').value = veg3_ptB_out2.toFixed(2);
+  document.querySelector('.flow1_pB_out2').value = flow1_ptB_out2.toFixed(2);
+  document.querySelector('.flow2_pB_out2').value = flow2_ptB_out2.toFixed(2);
+  document.querySelector('.flow3_pB_out2').value = flow3_ptB_out2.toFixed(2);
+  document.querySelector('.flow4_pB_out2').value = flow4_ptB_out2.toFixed(2);
+  document.querySelector('.flow5_pB_out2').value = flow5_ptB_out2.toFixed(2);
+  document.querySelector('.flow6_pB_out2').value = flow6_ptB_out2.toFixed(2);
+  document.querySelector('.flow7_pB_out2').value = flow7_ptB_out2.toFixed(2);
   
-  document.querySelector('.veg1_blm_out2').innerText = veg1_blm_out2.toFixed(2);
-  document.querySelector('.veg2_blm_out2').innerText = veg2_blm_out2.toFixed(2);
-  document.querySelector('.veg3_blm_out2').innerText = veg3_blm_out2.toFixed(2);
-  document.querySelector('.flow1_blm_out2').innerText = flow1_blm_out2.toFixed(2);
-  document.querySelector('.flow2_blm_out2').innerText = flow2_blm_out2.toFixed(2);
-  document.querySelector('.flow3_blm_out2').innerText = flow3_blm_out2.toFixed(2);
-  document.querySelector('.flow4_blm_out2').innerText = flow4_blm_out2.toFixed(2);
-  document.querySelector('.flow5_blm_out2').innerText = flow5_blm_out2.toFixed(2);
-  document.querySelector('.flow6_blm_out2').innerText = flow6_blm_out2.toFixed(2);
-  document.querySelector('.flow7_blm_out2').innerText = flow7_blm_out2.toFixed(2);
+  document.querySelector('.veg1_blm_out2').value = veg1_blm_out2.toFixed(2);
+  document.querySelector('.veg2_blm_out2').value = veg2_blm_out2.toFixed(2);
+  document.querySelector('.veg3_blm_out2').value = veg3_blm_out2.toFixed(2);
+  document.querySelector('.flow1_blm_out2').value = flow1_blm_out2.toFixed(2);
+  document.querySelector('.flow2_blm_out2').value = flow2_blm_out2.toFixed(2);
+  document.querySelector('.flow3_blm_out2').value = flow3_blm_out2.toFixed(2);
+  document.querySelector('.flow4_blm_out2').value = flow4_blm_out2.toFixed(2);
+  document.querySelector('.flow5_blm_out2').value = flow5_blm_out2.toFixed(2);
+  document.querySelector('.flow6_blm_out2').value = flow6_blm_out2.toFixed(2);
+  document.querySelector('.flow7_blm_out2').value = flow7_blm_out2.toFixed(2);
   
   document.querySelector('.veg1_total').innerText = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
   document.querySelector('.veg2_total').innerText = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
@@ -146,38 +146,38 @@ function calculateValues(e) {
   //TODO: Add an error if an option was not selected
   if (select.value == "DtL")
   {
-      document.querySelector('.veg1_pA_out1').innerText = veg1_ptA_g.toFixed(1);
-      document.querySelector('.veg2_pA_out1').innerText = veg2_ptA_g.toFixed(1);
-      document.querySelector('.veg3_pA_out1').innerText = veg3_ptA_g.toFixed(1);
-      document.querySelector('.flow1_pA_out1').innerText = flow1_ptA_g.toFixed(1);
-      document.querySelector('.flow2_pA_out1').innerText = flow2_ptA_g.toFixed(1);
-      document.querySelector('.flow3_pA_out1').innerText = flow3_ptA_g.toFixed(1);
-      document.querySelector('.flow4_pA_out1').innerText = flow4_ptA_g.toFixed(1);
-      document.querySelector('.flow5_pA_out1').innerText = flow5_ptA_g.toFixed(1);
-      document.querySelector('.flow6_pA_out1').innerText = flow6_ptA_g.toFixed(1);
-      document.querySelector('.flow7_pA_out1').innerText = flow7_ptA_g.toFixed(1);
+      document.querySelector('.veg1_pA_out1').value = veg1_ptA_g.toFixed(1);
+      document.querySelector('.veg2_pA_out1').value = veg2_ptA_g.toFixed(1);
+      document.querySelector('.veg3_pA_out1').value = veg3_ptA_g.toFixed(1);
+      document.querySelector('.flow1_pA_out1').value = flow1_ptA_g.toFixed(1);
+      document.querySelector('.flow2_pA_out1').value = flow2_ptA_g.toFixed(1);
+      document.querySelector('.flow3_pA_out1').value = flow3_ptA_g.toFixed(1);
+      document.querySelector('.flow4_pA_out1').value = flow4_ptA_g.toFixed(1);
+      document.querySelector('.flow5_pA_out1').value = flow5_ptA_g.toFixed(1);
+      document.querySelector('.flow6_pA_out1').value = flow6_ptA_g.toFixed(1);
+      document.querySelector('.flow7_pA_out1').value = flow7_ptA_g.toFixed(1);
       
-      document.querySelector('.veg1_pB_out1').innerText = veg1_ptB_g.toFixed(1);
-      document.querySelector('.veg2_pB_out1').innerText = veg2_ptB_g.toFixed(1);
-      document.querySelector('.veg3_pB_out1').innerText = veg3_ptB_g.toFixed(1);
-      document.querySelector('.flow1_pB_out1').innerText = flow1_ptB_g.toFixed(1);
-      document.querySelector('.flow2_pB_out1').innerText = flow2_ptB_g.toFixed(1);
-      document.querySelector('.flow3_pB_out1').innerText = flow3_ptB_g.toFixed(1);
-      document.querySelector('.flow4_pB_out1').innerText = flow4_ptB_g.toFixed(1);
-      document.querySelector('.flow5_pB_out1').innerText = flow5_ptB_g.toFixed(1);
-      document.querySelector('.flow6_pB_out1').innerText = flow6_ptB_g.toFixed(1);
-      document.querySelector('.flow7_pB_out1').innerText = flow7_ptB_g.toFixed(1);
+      document.querySelector('.veg1_pB_out1').value = veg1_ptB_g.toFixed(1);
+      document.querySelector('.veg2_pB_out1').value = veg2_ptB_g.toFixed(1);
+      document.querySelector('.veg3_pB_out1').value = veg3_ptB_g.toFixed(1);
+      document.querySelector('.flow1_pB_out1').value = flow1_ptB_g.toFixed(1);
+      document.querySelector('.flow2_pB_out1').value = flow2_ptB_g.toFixed(1);
+      document.querySelector('.flow3_pB_out1').value = flow3_ptB_g.toFixed(1);
+      document.querySelector('.flow4_pB_out1').value = flow4_ptB_g.toFixed(1);
+      document.querySelector('.flow5_pB_out1').value = flow5_ptB_g.toFixed(1);
+      document.querySelector('.flow6_pB_out1').value = flow6_ptB_g.toFixed(1);
+      document.querySelector('.flow7_pB_out1').value = flow7_ptB_g.toFixed(1);
 
-      document.querySelector('.veg1_blm_out1').innerText = veg1_blm_g.toFixed(1);
-      document.querySelector('.veg2_blm_out1').innerText = veg2_blm_g.toFixed(1);
-      document.querySelector('.veg3_blm_out1').innerText = veg3_blm_g.toFixed(1);
-      document.querySelector('.flow1_blm_out1').innerText = flow1_blm_g.toFixed(1);
-      document.querySelector('.flow2_blm_out1').innerText = flow2_blm_g.toFixed(1);
-      document.querySelector('.flow3_blm_out1').innerText = flow3_blm_g.toFixed(1);
-      document.querySelector('.flow4_blm_out1').innerText = flow4_blm_g.toFixed(1);
-      document.querySelector('.flow5_blm_out1').innerText = flow5_blm_g.toFixed(1);
-      document.querySelector('.flow6_blm_out1').innerText = flow6_blm_g.toFixed(1);
-      document.querySelector('.flow7_blm_out1').innerText = flow7_blm_g.toFixed(1);
+      document.querySelector('.veg1_blm_out1').value = veg1_blm_g.toFixed(1);
+      document.querySelector('.veg2_blm_out1').value = veg2_blm_g.toFixed(1);
+      document.querySelector('.veg3_blm_out1').value = veg3_blm_g.toFixed(1);
+      document.querySelector('.flow1_blm_out1').value = flow1_blm_g.toFixed(1);
+      document.querySelector('.flow2_blm_out1').value = flow2_blm_g.toFixed(1);
+      document.querySelector('.flow3_blm_out1').value = flow3_blm_g.toFixed(1);
+      document.querySelector('.flow4_blm_out1').value = flow4_blm_g.toFixed(1);
+      document.querySelector('.flow5_blm_out1').value = flow5_blm_g.toFixed(1);
+      document.querySelector('.flow6_blm_out1').value = flow6_blm_g.toFixed(1);
+      document.querySelector('.flow7_blm_out1').value = flow7_blm_g.toFixed(1);
       console.log(unit);
       unit.forEach(unit=>unit.innerText = "grams");
 
@@ -187,82 +187,82 @@ function calculateValues(e) {
   {
       if (input[0].value == 2.4)
       {
-          document.querySelector('.veg1_pA_out1').innerText = 22;
+          document.querySelector('.veg1_pA_out1').value = 22;
       }
       else
       {
-          document.querySelector('.veg1_pA_out1').innerText = Math.floor(veg1_ptA_g/(849/3785));
+          document.querySelector('.veg1_pA_out1').value = Math.floor(veg1_ptA_g/(849/3785));
       }
       if (input[1].value == 2.4)
       {
-          document.querySelector('.veg2_pA_out1').innerText = 22;
+          document.querySelector('.veg2_pA_out1').value = 22;
       }
       else
       {
-          document.querySelector('.veg2_pA_out1').innerText = Math.floor(veg2_ptA_g/(849/3785));
+          document.querySelector('.veg2_pA_out1').value = Math.floor(veg2_ptA_g/(849/3785));
       }
       if (input[2].value == 2.4)
       {
-          document.querySelector('.veg3_pA_out1').innerText = 22;
+          document.querySelector('.veg3_pA_out1').value = 22;
       }
       else
       {
-          document.querySelector('.veg3_pA_out1').innerText = Math.floor(veg3_ptA_g/(849/3785));
+          document.querySelector('.veg3_pA_out1').value = Math.floor(veg3_ptA_g/(849/3785));
       }
       
-      document.querySelector('.flow1_pA_out1').innerText = Math.round(flow1_ptA_g/(849/3785));
-      document.querySelector('.flow2_pA_out1').innerText = Math.round(flow2_ptA_g/(849/3785));
-      document.querySelector('.flow3_pA_out1').innerText = Math.round(flow3_ptA_g/(849/3785));
-      document.querySelector('.flow4_pA_out1').innerText = Math.round(flow4_ptA_g/(849/3785));
-      document.querySelector('.flow5_pA_out1').innerText = Math.round(flow5_ptA_g/(849/3785));
-      document.querySelector('.flow6_pA_out1').innerText = Math.round(flow6_ptA_g/(849/3785));
-      document.querySelector('.flow7_pA_out1').innerText = Math.round(flow7_ptA_g/(849/3785));
+      document.querySelector('.flow1_pA_out1').value = Math.round(flow1_ptA_g/(849/3785));
+      document.querySelector('.flow2_pA_out1').value = Math.round(flow2_ptA_g/(849/3785));
+      document.querySelector('.flow3_pA_out1').value = Math.round(flow3_ptA_g/(849/3785));
+      document.querySelector('.flow4_pA_out1').value = Math.round(flow4_ptA_g/(849/3785));
+      document.querySelector('.flow5_pA_out1').value = Math.round(flow5_ptA_g/(849/3785));
+      document.querySelector('.flow6_pA_out1').value = Math.round(flow6_ptA_g/(849/3785));
+      document.querySelector('.flow7_pA_out1').value = Math.round(flow7_ptA_g/(849/3785));
 
-      document.querySelector('.veg1_pB_out1').innerText = Math.round(veg1_ptB_g/(570/3785));
-      document.querySelector('.veg2_pB_out1').innerText = Math.round(veg2_ptB_g/(570/3785));
-      document.querySelector('.veg3_pB_out1').innerText = Math.round(veg3_ptB_g/(570/3785));
-      document.querySelector('.flow1_pB_out1').innerText = Math.round(flow1_ptB_g/(570/3785));
-      document.querySelector('.flow2_pB_out1').innerText = Math.round(flow2_ptB_g/(570/3785));
-      document.querySelector('.flow3_pB_out1').innerText = Math.round(flow3_ptB_g/(570/3785));
-      document.querySelector('.flow4_pB_out1').innerText = Math.round(flow4_ptB_g/(570/3785));
-      document.querySelector('.flow5_pB_out1').innerText = Math.round(flow5_ptB_g/(570/3785));
-      document.querySelector('.flow6_pB_out1').innerText = Math.round(flow6_ptB_g/(570/3785));
-      document.querySelector('.flow7_pB_out1').innerText = Math.round(flow7_ptB_g/(570/3785));
+      document.querySelector('.veg1_pB_out1').value = Math.round(veg1_ptB_g/(570/3785));
+      document.querySelector('.veg2_pB_out1').value = Math.round(veg2_ptB_g/(570/3785));
+      document.querySelector('.veg3_pB_out1').value = Math.round(veg3_ptB_g/(570/3785));
+      document.querySelector('.flow1_pB_out1').value = Math.round(flow1_ptB_g/(570/3785));
+      document.querySelector('.flow2_pB_out1').value = Math.round(flow2_ptB_g/(570/3785));
+      document.querySelector('.flow3_pB_out1').value = Math.round(flow3_ptB_g/(570/3785));
+      document.querySelector('.flow4_pB_out1').value = Math.round(flow4_ptB_g/(570/3785));
+      document.querySelector('.flow5_pB_out1').value = Math.round(flow5_ptB_g/(570/3785));
+      document.querySelector('.flow6_pB_out1').value = Math.round(flow6_ptB_g/(570/3785));
+      document.querySelector('.flow7_pB_out1').value = Math.round(flow7_ptB_g/(570/3785));
 
 
       //the first 3 weeks need to be a conditionality
       //if input >= 3: output = regular_calc+1; else output = regular_calc
-      document.querySelector('.veg1_blm_out1').innerText = veg1_blm_g;
-      document.querySelector('.veg2_blm_out1').innerText = veg2_blm_g;
-      document.querySelector('.veg3_blm_out1').innerText = veg3_blm_g;
+      document.querySelector('.veg1_blm_out1').value = veg1_blm_g;
+      document.querySelector('.veg2_blm_out1').value = veg2_blm_g;
+      document.querySelector('.veg3_blm_out1').value = veg3_blm_g;
       if (input[3].value >= 3)
       {
-          document.querySelector('.flow1_blm_out1').innerText = Math.ceil(flow1_blm_g/(667/3785))+1;
+          document.querySelector('.flow1_blm_out1').value = Math.ceil(flow1_blm_g/(667/3785))+1;
       }
       else
       {
-          document.querySelector('.flow1_blm_out1').innerText = Math.ceil(flow1_blm_g/(667/3785));
+          document.querySelector('.flow1_blm_out1').value = Math.ceil(flow1_blm_g/(667/3785));
       }
       if (input[4].value >= 3)
       {
-          document.querySelector('.flow2_blm_out1').innerText = Math.ceil(flow2_blm_g/(667/3785))+1;
+          document.querySelector('.flow2_blm_out1').value = Math.ceil(flow2_blm_g/(667/3785))+1;
       }
       else
       {
-          document.querySelector('.flow2_blm_out1').innerText = Math.ceil(flow2_blm_g/(667/3785));
+          document.querySelector('.flow2_blm_out1').value = Math.ceil(flow2_blm_g/(667/3785));
       }
       if (input[5].value >= 3)
       {
-          document.querySelector('.flow3_blm_out1').innerText = Math.ceil(flow3_blm_g/(667/3785))+1;
+          document.querySelector('.flow3_blm_out1').value = Math.ceil(flow3_blm_g/(667/3785))+1;
       }
       else
       {
-          document.querySelector('.flow3_blm_out1').innerText = Math.round(flow3_blm_g/(667/3785));
+          document.querySelector('.flow3_blm_out1').value = Math.round(flow3_blm_g/(667/3785));
       }
-      document.querySelector('.flow4_blm_out1').innerText = Math.round(flow4_blm_g/(667/3785));
-      document.querySelector('.flow5_blm_out1').innerText = Math.round(flow5_blm_g/(667/3785));
-      document.querySelector('.flow6_blm_out1').innerText = Math.round(flow6_blm_g/(667/3785));
-      document.querySelector('.flow7_blm_out1').innerText = Math.round(flow7_blm_g/(667/3785));
+      document.querySelector('.flow4_blm_out1').value = Math.round(flow4_blm_g/(667/3785));
+      document.querySelector('.flow5_blm_out1').value = Math.round(flow5_blm_g/(667/3785));
+      document.querySelector('.flow6_blm_out1').value = Math.round(flow6_blm_g/(667/3785));
+      document.querySelector('.flow7_blm_out1').value = Math.round(flow7_blm_g/(667/3785));
     
 
       unit.forEach(unit=>unit.innerText = "ML");
@@ -270,172 +270,172 @@ function calculateValues(e) {
 
   if (input[0].value >= 3.5)
   {
-    document.querySelector('.si_veg1').innerText = 0.125;
+    document.querySelector('.si_veg1').value = 0.125;
   }
   else if (input[0].value >= 2.7)
   {
-    document.querySelector('.si_veg1').innerText = 0.25;
+    document.querySelector('.si_veg1').value = 0.25;
   }
   else if (input[0].value >= 2.3)
   {
-    document.querySelector('.si_veg1').innerText = 0.33;
+    document.querySelector('.si_veg1').value = 0.33;
   }
   else
   {
-    document.querySelector('.si_veg1').innerText = 0.5;
+    document.querySelector('.si_veg1').value = 0.5;
   }
 
   if (input[1].value >= 3.5)
   {
-      document.querySelector('.si_veg2').innerText = Number(0.125);
+      document.querySelector('.si_veg2').value = Number(0.125);
   }
   else if (input[1].value >= 2.7)
   {
-      document.querySelector('.si_veg2').innerText = Number(0.25);
+      document.querySelector('.si_veg2').value = Number(0.25);
   }
   else if (input[1].value >= 2.3)
   {
-      document.querySelector('.si_veg2').innerText = 0.33;
+      document.querySelector('.si_veg2').value = 0.33;
   }
   else
   {
-      document.querySelector('.si_veg2').innerText = 0.5;
+      document.querySelector('.si_veg2').value = 0.5;
   }
 
   if (input[2].value >= 3.5)
   {
-      document.querySelector('.si_veg3').innerText = Number(0.125);
+      document.querySelector('.si_veg3').value = Number(0.125);
   }
   else if (input[2].value >= 2.7)
   {
-      document.querySelector('.si_veg3').innerText = Number(0.25);
+      document.querySelector('.si_veg3').value = Number(0.25);
   }
   else if (input[2].value >= 2.3)
   {
-      document.querySelector('.si_veg3').innerText = Number(0.33);
+      document.querySelector('.si_veg3').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_veg3').innerText = Number(0.5);
+      document.querySelector('.si_veg3').value = Number(0.5);
   }
 
   if (input[3].value >= 3.5)
   {
-      document.querySelector('.si_flow1').innerText = Number(0.125);
+      document.querySelector('.si_flow1').value = Number(0.125);
   }
   else if (input[3].value >= 2.7)
   {
-      document.querySelector('.si_flow1').innerText = Number(0.25);
+      document.querySelector('.si_flow1').value = Number(0.25);
   }
   else if (input[3].value >= 2.3)
   {
-      document.querySelector('.si_flow1').innerText = Number(0.33);
+      document.querySelector('.si_flow1').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow1').innerText = Number(0.5);
+      document.querySelector('.si_flow1').value = Number(0.5);
   }
 
   if (input[4].value >= 3.5)
   {
-      document.querySelector('.si_flow2').innerText = Number(0.125);
+      document.querySelector('.si_flow2').value = Number(0.125);
   }
   else if (input[4].value >= 2.7)
   {
-      document.querySelector('.si_flow2').innerText = Number(0.25);
+      document.querySelector('.si_flow2').value = Number(0.25);
   }
   else if (input[4].value >= 2.3)
   {
-      document.querySelector('.si_flow2').innerText = Number(0.33);
+      document.querySelector('.si_flow2').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow2').innerText = Number(0.5);
+      document.querySelector('.si_flow2').value = Number(0.5);
   }
 
   if (input[5].value >= 3.5)
   {
-      document.querySelector('.si_flow3').innerText = Number(0.125);
+      document.querySelector('.si_flow3').value = Number(0.125);
   }
   else if (input[5].value >= 2.7)
   {
-      document.querySelector('.si_flow3').innerText = Number(0.25);
+      document.querySelector('.si_flow3').value = Number(0.25);
   }
   else if (input[5].value >= 2.3)
   {
-      document.querySelector('.si_flow3').innerText = Number(0.33);
+      document.querySelector('.si_flow3').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow3').innerText = Number(0.5);
+      document.querySelector('.si_flow3').value = Number(0.5);
   }
 
   if (input[6].value >= 3.5)
   {
-      document.querySelector('.si_flow4').innerText = Number(0.125);
+      document.querySelector('.si_flow4').value = Number(0.125);
   }
   else if (input[6].value >= 2.7)
   {
-      document.querySelector('.si_flow4').innerText = Number(0.25);
+      document.querySelector('.si_flow4').value = Number(0.25);
   }
   else if (input[6].value >= 2.3)
   {
-      document.querySelector('.si_flow4').innerText = Number(0.33);
+      document.querySelector('.si_flow4').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow4').innerText = Number(0.5);
+      document.querySelector('.si_flow4').value = Number(0.5);
   }
 
   if (input[7].value >= 3.5)
   {
-      document.querySelector('.si_flow5').innerText = Number(0.125);
+      document.querySelector('.si_flow5').value = Number(0.125);
   }
   else if (input[7].value >= 2.7)
   {
-      document.querySelector('.si_flow5').innerText = Number(0.25);
+      document.querySelector('.si_flow5').value = Number(0.25);
   }
   else if (input[7].value >= 2.3)
   {
-      document.querySelector('.si_flow5').innerText = Number(0.33);
+      document.querySelector('.si_flow5').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow5').innerText = Number(0.5);
+      document.querySelector('.si_flow5').value = Number(0.5);
   }
 
   if (input[8].value >= 3.5)
   {
-      document.querySelector('.si_flow6').innerText = Number(0.125);
+      document.querySelector('.si_flow6').value = Number(0.125);
   }
   else if (input[8].value >= 2.7)
   {
-      document.querySelector('.si_flow6').innerText = Number(0.25);
+      document.querySelector('.si_flow6').value = Number(0.25);
   }
   else if (input[8].value >= 2.3)
   {
-      document.querySelector('.si_flow6').innerText = Number(0.33);
+      document.querySelector('.si_flow6').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow6').innerText = Number(0.5);
+      document.querySelector('.si_flow6').value = Number(0.5);
   }
 
   if (input[9].value >= 3.5)
   {
-      document.querySelector('.si_flow7').innerText = Number(0.125);
+      document.querySelector('.si_flow7').value = Number(0.125);
   }
   else if (input[9].value >= 2.7)
   {
-      document.querySelector('.si_flow7').innerText = Number(0.25);
+      document.querySelector('.si_flow7').value = Number(0.25);
   }
   else if (input[9].value >= 2.3)
   {
-      document.querySelector('.si_flow7').innerText = Number(0.33);
+      document.querySelector('.si_flow7').value = Number(0.33);
   }
   else
   {
-      document.querySelector('.si_flow7').innerText = Number(0.5);
+      document.querySelector('.si_flow7').value = Number(0.5);
   }
 }
 
