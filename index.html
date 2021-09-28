@@ -19,97 +19,88 @@
             <option value="conc">Stock Concentrate (mL/Gal)</option>
         </select>
     </div>
-    <div class="input-container">
-        <table class="input-table">
-            <tr class='main-table-row'>
-                <th colspan="2"></th>
-                <th colspan='3' class='bold'>Veg Cycle</th>
-                <th colspan='9' class='bold'>Flower Cycle</th>
-            </tr>
-            <tr class='main-table-row input-row'>
-                <td class='ec_target bold'>EC Targets</td>
-                <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
-                
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input veg1' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input veg2' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input veg3' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow1' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow2' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow3' placeholder='0'></td></tr>
-                    </table>
-                </td>
+    <div>
+        <div class="input-container">
+            <table class="input-table">
+                <tr class='main-table-row'>
+                    <th colspan="2"></th>
+                    <th colspan='3' class='bold'>Veg Cycle</th>
+                    <th colspan='9' class='bold'>Flower Cycle</th>
+                </tr>
+                <tr class='main-table-row input-row'>
+                    <td class='ec_target bold'>EC Targets</td>
+                    <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                    
+                    <td class='input-1 results dotted'>
+                        <input type="number" class='input veg1' placeholder='0'>
+                    </td>
 
-                <td class='week-1 results'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow4' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='flush results'></td>
+                    <td class='input-2 results dotted'>
+                        <input type="number" class='input veg2' placeholder='0'>
+                    </td>
 
-               
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow5' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results dotted'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow6' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='week-1 results'>
-                    <table>
-                        <tr><td style='width: 100%;'><input type="number" class='input flow7' placeholder='0'></td></tr>
-                    </table>
-                </td>
-                <td class='flush results'></td>
+                    <td class='input-3 results'>
+                        <input type="number" class='input veg3' placeholder='0'>
+                    </td>
 
-            </tr>
-        </table>
+                    <td class='input-4 results dotted'>
+                        <input type="number" class='input flow1' placeholder='0'>
+                    </td>
 
+                    <td class='input-5 results dotted'>
+                        <input type="number" class='input flow2' placeholder='0'>
+                    </td>
+                    <td class='input-6 results dotted'>
+                        <input type="number" class='input flow3' placeholder='0'>
+                    </td>
+    
+                    <td class='input-7 results'>
+                        <input type="number" class='input flow4' placeholder='0'>
+                    </td>
+
+                    <td class='flush results'></td>
+    
+                   
+                    <td class='input-8 results dotted'>
+                        <input type="number" class='input flow5' placeholder='0'>
+                    </td>
+
+                    <td class='input-9 results dotted'>
+                        <input type="number" class='input flow6' placeholder='0'>
+                    </td>
+
+                    <td class='input-10 results'>
+                        <input type="number" class='input flow7' placeholder='0'>
+                    </td>
+
+                    <td class='flush results'></td>
+    
+                </tr>
+            </table>
+    
+        </div>
+        <button class="btn calculate_button">Calculate</button>
     </div>
-    <button class="btn calculate_button">Calculate</button>
+    
 
     <div class="table-container">
 
         <table id='main-table'>          
             <tr class='main-table-row'>
                 <td class='bold product'>Product</td>
-                <td class='bold'>Units</td>
-                <td><span class='bold-digit week1'>1</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week2'>2</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week3'>3+</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week4'>1</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week5'>2</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit  week6'>3</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit  week7'>4</span><br><span class='small bold'>Week</span></td>
-                <td><span class="small bold  flush1"> Flush</span></td>
-                <td><span class='bold-digit week8'>5</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week9'>6</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit week10'>7</span><br><span class='small bold'>Week</span></td>
-                <td><span class='bold-digit flush2'>8+</span><br><span class='small bold'>Week</span></td>
+                <td class='bold units-column'>Units</td>
+                <td class='week1'><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td class='week2'><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td class='week3'><span class='bold-digit'>3+</span><br><span class='small bold'>Week</span></td>
+                <td class='week4'><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td class='week5'><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td class='week6'><span class='bold-digit'>3</span><br><span class='small bold'>Week</span></td>
+                <td class='week7'><span class='bold-digit'>4</span><br><span class='small bold'>Week</span></td>
+                <td class='flush1'><span class="small bold"> Flush</span></td>
+                <td class='week8'><span class='bold-digit'>5</span><br><span class='small bold'>Week</span></td>
+                <td class='week9'><span class='bold-digit'>6</span><br><span class='small bold'>Week</span></td>
+                <td class='week10'><span class='bold-digit'>7</span><br><span class='small bold'>Week</span></td>
+                <td class='flush2'><span class='bold-digit'>8+</span><br><span class='small bold'>Week</span></td>
             </tr>
             
             
