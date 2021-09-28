@@ -5,6 +5,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.results::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -105,6 +110,7 @@ input {
   background: transparent;
   width: 100%;
   cursor: text;
+  font-size: 0.8rem;
 }
 
 #main-table tr.main-table-row:nth-child(even) {
@@ -225,6 +231,15 @@ input {
 
 #main-table > tbody > tr > td.results {
   padding: 0;
+  min-width: 70px;
+  max-width: 80px;
+}
+.innerDiv {
+  overflow-x: auto;
+}
+.innerDiv::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }
 
 .input-unit {
