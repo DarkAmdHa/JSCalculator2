@@ -459,3 +459,24 @@ function displayTable(e){
 
     }
 }
+
+function setInputTableDimensions(){
+    console.log();
+    document.querySelector('.input-1').style.width = `${document.querySelector('.week1').offsetWidth}px`;
+    document.querySelector('.input-2').style.width = `${document.querySelector('.week2').offsetWidth}px`;
+    document.querySelector('.input-3').style.width = `${document.querySelector('.week3').offsetWidth}px`;
+    document.querySelector('.input-4').style.width = `${document.querySelector('.week4').offsetWidth}px`;
+    document.querySelector('.input-5').style.width = `${document.querySelector('.week5').offsetWidth}px`;
+    document.querySelector('.input-6').style.width = `${document.querySelector('.week6').offsetWidth}px`;
+    document.querySelector('.input-7').style.width = `${document.querySelector('.week7').offsetWidth}px`;
+    document.querySelector('.input-8').style.width = `${document.querySelector('.week8').offsetWidth}px`;
+    document.querySelector('.input-9').style.width = `${document.querySelector('.week9').offsetWidth}px`;
+    document.querySelector('.input-10').style.width = `${document.querySelector('.week10').offsetWidth}px`;
+    document.querySelector('.ec_target').style.width = `${document.querySelector('.product').offsetWidth}px`;
+    document.querySelector('.input-unit').style.width = `${document.querySelector('.units-column').offsetWidth}px`;
+
+
+
+}
+
+setInputTableDimensions();
