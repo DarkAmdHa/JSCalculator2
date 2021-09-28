@@ -32,6 +32,7 @@ input {
   outline: none;
   -webkit-text-fill-color: rgba(0, 0, 0, 1);
   -webkit-opacity: 1;
+  padding: 0.4rem 0;
 }
 
 .table-container {
@@ -212,13 +213,30 @@ input {
 
 .btn,
 .save-pdf {
-  height: 34.3px;
+  height: fit-content;
   margin-left: 1rem;
   margin-top: 1rem;
-  padding: 0 2rem;
   cursor: pointer;
   font-weight: bold;
-  width: 135px;
+  border-radius: 65px;
+  color: #333;
+  background: #fff;
+  text-transform: uppercase;
+  /* text-align: center; */
+  font-family: Industrial, sans-serif;
+  font-size: 16px;
+  padding: 0.25rem 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border-color: #333;
+  outline: none;
+  transition: all 0.5s ease-out;
+}
+
+.btn:hover,
+.save-pdf:hover {
+  background: #910000;
+  color: #fff;
 }
 
 .greyed-out {
@@ -294,6 +312,19 @@ input {
   justify-content: center;
 }
 
+.input-table > tbody > tr > td.input-1,
+.input-table > tbody > tr > td.input-2,
+.input-table > tbody > tr > td.input-3,
+.input-table > tbody > tr > td.input-4,
+.input-table > tbody > tr > td.input-5,
+.input-table > tbody > tr > td.input-6,
+.input-table > tbody > tr > td.input-7,
+.input-table > tbody > tr > td.input-8,
+.input-table > tbody > tr > td.input-9,
+.input-table > tbody > tr > td.input-10 {
+  padding: 0 0.2rem;
+}
+
 @media print {
   .btn,
   .save-pdf {
@@ -318,5 +349,7 @@ input {
 @media (max-width: 768px) {
   .align-center {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
