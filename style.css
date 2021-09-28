@@ -22,6 +22,9 @@ table {
   text-transform: uppercase;
 }
 
+input {
+  color: #333;
+}
 .table-container {
   opacity: 0;
   transform: translateX(-500px);
@@ -56,7 +59,7 @@ table {
 #main-table > tbody > tr > td,
 .input-table > tbody > tr > td {
   border-right: 3px solid black;
-  padding: 0 0.5rem;
+  padding: 0 2px;
 }
 
 #main-table th,
@@ -70,24 +73,13 @@ table {
   border-bottom: 3px solid black;
 }
 
-/* Width Assigned to input table to give it a similar width to the main table */
-/* Width may need to be changed based on changes made to main table */
-.input-table .ec_target {
-  width: 121.41px;
-  border-right: 3px solid;
-}
-
-.input .results {
-  width: 66.46px;
-}
-
 .small {
-  font-size: 0.6rem;
+  font-size: 9px;
   display: block;
 }
 
 .medium {
-  font-size: 0.8rem;
+  font-size: 11px;
 }
 input {
   text-align: center;
@@ -120,10 +112,6 @@ input {
   -webkit-print-color-adjust: exact;
 }
 
-.results {
-  max-width: 80px;
-}
-
 .input {
   width: 98%;
 }
@@ -133,7 +121,6 @@ input {
   background: #808080;
   -webkit-print-color-adjust: exact;
   color: white;
-  writing-mode: vertical-rl;
   position: relative;
   font-weight: bold;
   width: 52.3px;
@@ -166,6 +153,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
+  writing-mode: vertical-rl;
 }
 .header {
   display: flex;
@@ -215,8 +203,10 @@ input {
   -webkit-print-color-adjust: exact;
 }
 
-.total-row {
+#main-table tr.main-table-row.total-row {
+  background-color: #333;
   height: 2.5rem;
+  color: #fff;
 }
 
 .buttons {
@@ -267,4 +257,8 @@ input {
   .table-container {
     overflow: visible;
   }
+}
+
+.units-column {
+  min-width: 110px;
 }
