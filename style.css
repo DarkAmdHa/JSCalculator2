@@ -28,7 +28,10 @@ table {
 }
 
 input {
-  color: #333;
+  text-align: center;
+  outline: none;
+  -webkit-text-fill-color: rgba(0, 0, 0, 1);
+  -webkit-opacity: 1;
 }
 .table-container {
   opacity: 0;
@@ -92,7 +95,18 @@ input {
 }
 
 .dotted {
-  border-right: 1.5px dashed black !important;
+  border-right-width: 0px !important;
+  position: relative;
+}
+
+.dotted:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  border-right: 3px dashed black;
+  right: -1px;
+  top: 0;
 }
 
 .primary-output {
@@ -271,6 +285,9 @@ input {
   .input-container,
   .table-container {
     overflow: visible;
+  }
+  @page {
+    size: landscape;
   }
 }
 
