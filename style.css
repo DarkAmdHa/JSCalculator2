@@ -33,6 +33,7 @@ input {
   -webkit-text-fill-color: rgba(0, 0, 0, 1);
   -webkit-opacity: 1;
   padding: 0.4rem 0;
+  font-size: 1.2rem;
 }
 
 .table-container {
@@ -91,6 +92,7 @@ input {
 
 .medium {
   font-size: 11px;
+  padding-top: 14px;
 }
 input {
   text-align: center;
@@ -325,31 +327,50 @@ input {
   padding: 0 0.2rem;
 }
 
-@media print {
-  .btn,
-  .save-pdf {
-    visibility: hidden;
-    display: none;
-  }
-
-  .align-center {
-    display: block;
-    justify-content: flex-start;
-  }
-
-  .input-container,
-  .table-container {
-    overflow: visible;
-  }
-  @page {
-    size: landscape;
-  }
-}
-
 @media (max-width: 768px) {
+  /* .header {
+    display: none;
+  } */
   .align-center {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @media print {
+    .btn,
+    .save-pdf {
+      visibility: hidden;
+      display: none;
+    }
+
+    .align-center {
+      display: block;
+      justify-content: flex-start;
+    }
+
+    .input-container,
+    .table-container {
+      overflow: visible;
+    }
+    /* .content {
+      transform: rotate(90deg);
+      margin-left: 250px;
+    }
+    #main-table > tbody > tr > td.results {
+      min-width: 0px;
+    }
+    .units-column {
+      min-width: 0px;
+    }
+
+    #main-table,
+    .input-table {
+      width: 200mm;
+    }
+    @page {
+      margin: 0px;
+      size: portrait;
+    } */
   }
 }
