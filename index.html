@@ -8,18 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
+    
+    <div class="content"><div class="header">
         <h1>Custom Feed Chart</h1>
-        <label for="type">Type:</label>
+        <label for="type">1. Select Irrigation Method</label>
         <select id="type" name="type" onchange='calculateValues()'>
             <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
             <option value="conc">Stock Concentrate (mL/Gal)</option>
         </select>
+        <p>2. Input Weekly EC Targets</p>
     </div>
-    <div class="content">
         <div class='align-center'>
         <div class="input-container">
             <table class="input-table">
@@ -400,16 +402,16 @@
             <tr class='main-table-row total-row'>
                 <td colspan="2" class='bold'>Total EC
                 </td>
-                <td class='veg1_total dotted'></td>
-                <td class='veg2_total dotted'></td>
-                <td class='veg3_total'></td>
-                <td class='flow1_total dotted'></td>
-                <td class='flow2_total dotted'></td>
-                <td class='flow3_total dotted'></td>
-                <td class='flow4_total'></td>
-                <td class='flow5_total dotted'></td>
-                <td class='flow6_total dotted'></td>
-                <td class='flow7_total'></td>
+                <td class='veg1_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='veg2_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='veg3_total'><input type="number" class="total-output" disabled></td>
+                <td class='flow1_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='flow2_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='flow3_total dotted'><input type="number" class="total-output" disasbled></td>
+                <td class='flow4_total'><input type="number" class="total-output" disabled></td>
+                <td class='flow5_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='flow6_total dotted'><input type="number" class="total-output" disabled></td>
+                <td class='flow7_total'><input type="number" class="total-output" disabled></td>
             </tr>
         
         </table>
@@ -444,10 +446,11 @@
     <button class="save-pdf">Save As PDF</button>
     </div>
     </div>
-    
-    
+    <div id="elementH"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src='app.js'></script>
+<script src='app.js'></script>
+
 </body>
 </html>
