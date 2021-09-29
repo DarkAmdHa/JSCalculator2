@@ -27,9 +27,21 @@ table {
   text-transform: uppercase;
 }
 
-th {
+th,
+.main-table-row-header {
   font-family: Industrial, sans-serif;
 }
+
+.main-table-row-header > * {
+  font-family: inherit;
+}
+
+.product,
+.units-column {
+  font-weight: 500;
+  font-size: 23px;
+}
+
 input {
   text-align: center;
   outline: none;
@@ -185,11 +197,11 @@ input {
 }
 
 .flush p {
-  height:250px;
   margin-bottom: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 250px;
   transform: translate(-50%, -50%);
   height: 100%;
   writing-mode: vertical-rl;
@@ -394,6 +406,7 @@ td > table {
   }
   .units-column {
     min-width: 0;
+    font-family: inherit;
   }
   .header {
     margin-left: 10rem;
