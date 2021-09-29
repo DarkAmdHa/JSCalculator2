@@ -27,6 +27,9 @@ table {
   text-transform: uppercase;
 }
 
+th {
+  font-family: Industrial, sans-serif;
+}
 input {
   text-align: center;
   outline: none;
@@ -125,8 +128,7 @@ input {
 }
 
 .primary-output,
-.secondary-output,
-.total-output {
+.secondary-output {
   border: none;
   background: transparent;
   width: 100%;
@@ -141,13 +143,6 @@ input {
 
 .secondary-output {
   font-size: 0.8rem;
-}
-
-.total-output {
-  font-weight: bold;
-  font-size: 1.1rem;
-  font-weight: 100;
-  -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 #main-table tr.main-table-row:nth-child(even) {
@@ -401,6 +396,12 @@ td > table {
   }
   .header {
     margin-left: 10rem;
+  }
+  .primary-output {
+    font-size: 1rem;
+  }
+  .secondary-output {
+    font-size: 0.8rem;
   }
 
   @page {
