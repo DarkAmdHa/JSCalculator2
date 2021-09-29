@@ -185,6 +185,7 @@ input {
 }
 
 .flush p {
+  height:250px;
   margin-bottom: 2rem;
   position: absolute;
   top: 50%;
