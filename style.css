@@ -328,9 +328,9 @@ input {
 }
 
 @media (max-width: 768px) {
-  /* .header {
+  .header {
     display: none;
-  } */
+  }
   .align-center {
     flex-direction: column;
     justify-content: center;
@@ -353,7 +353,7 @@ input {
     .table-container {
       overflow: visible;
     }
-    /* .content {
+    .content {
       transform: rotate(90deg);
       margin-left: 250px;
     }
@@ -366,11 +366,15 @@ input {
 
     #main-table,
     .input-table {
-      width: 200mm;
+      width: 250mm;
+    }
+    #main-table > tbody > tr > td,
+    .input-table > tbody > tr > td {
+      padding: 0 5px;
     }
     @page {
       margin: 0px;
       size: portrait;
-    } */
+    }
   }
 }
