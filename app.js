@@ -98,16 +98,16 @@ function calculateValues(e) {
   document.querySelector('.flow6_blm_out2').value = flow6_blm_out2.toFixed(2);
   document.querySelector('.flow7_blm_out2').value = flow7_blm_out2.toFixed(2);
   
-  document.querySelector('.veg1_total').firstElementChild.value = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
-  document.querySelector('.veg2_total').firstElementChild.value = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
-  document.querySelector('.veg3_total').firstElementChild.value = (Number(veg3_ptA_out2) + Number(veg3_ptB_out2)).toFixed(2);
-  document.querySelector('.flow1_total').firstElementChild.value = (Number(flow1_ptA_out2) + Number(flow1_ptB_out2) + Number(flow1_blm_out2)).toFixed(2);
-  document.querySelector('.flow2_total').firstElementChild.value = (Number(flow2_ptA_out2) + Number(flow2_ptB_out2) + Number(flow2_blm_out2)).toFixed(2);
-  document.querySelector('.flow3_total').firstElementChild.value = (Number(flow3_ptA_out2) + Number(flow3_ptB_out2) + Number(flow3_blm_out2)).toFixed(2);
-  document.querySelector('.flow4_total').firstElementChild.value = (Number(flow4_ptA_out2) + Number(flow4_ptB_out2) + Number(flow4_blm_out2)).toFixed(2);
-  document.querySelector('.flow5_total').firstElementChild.value = (Number(flow5_ptA_out2) + Number(flow5_ptB_out2) + Number(flow5_blm_out2)).toFixed(2);
-  document.querySelector('.flow6_total').firstElementChild.value = (Number(flow6_ptA_out2) + Number(flow6_ptB_out2) + Number(flow6_blm_out2)).toFixed(2);
-  document.querySelector('.flow7_total').firstElementChild.value = (Number(flow7_ptA_out2) + Number(flow7_ptB_out2) + Number(flow7_blm_out2)).toFixed(2);
+  document.querySelector('.veg1_total').innerText = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
+  document.querySelector('.veg2_total').innerText = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
+  document.querySelector('.veg3_total').innerText = (Number(veg3_ptA_out2) + Number(veg3_ptB_out2)).toFixed(2);
+  document.querySelector('.flow1_total').innerText = (Number(flow1_ptA_out2) + Number(flow1_ptB_out2) + Number(flow1_blm_out2)).toFixed(2);
+  document.querySelector('.flow2_total').innerText = (Number(flow2_ptA_out2) + Number(flow2_ptB_out2) + Number(flow2_blm_out2)).toFixed(2);
+  document.querySelector('.flow3_total').innerText = (Number(flow3_ptA_out2) + Number(flow3_ptB_out2) + Number(flow3_blm_out2)).toFixed(2);
+  document.querySelector('.flow4_total').innerText = (Number(flow4_ptA_out2) + Number(flow4_ptB_out2) + Number(flow4_blm_out2)).toFixed(2);
+  document.querySelector('.flow5_total').innerText = (Number(flow5_ptA_out2) + Number(flow5_ptB_out2) + Number(flow5_blm_out2)).toFixed(2);
+  document.querySelector('.flow6_total').innerText = (Number(flow6_ptA_out2) + Number(flow6_ptB_out2) + Number(flow6_blm_out2)).toFixed(2);
+  document.querySelector('.flow7_total').innerText = (Number(flow7_ptA_out2) + Number(flow7_ptB_out2) + Number(flow7_blm_out2)).toFixed(2);
   
 
   let veg1_ptA_g = ((veg1_ptA_out2)/ptA_EC);
@@ -440,7 +440,6 @@ function calculateValues(e) {
 }
 
 function saveAsPDF(e){
-     setInputTableDimensions();
         window.print();
         e.preventDefault();
 }
