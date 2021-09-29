@@ -328,53 +328,50 @@ input {
 }
 
 @media (max-width: 768px) {
-  .header {
-    display: none;
-  }
   .align-center {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+}
 
-  @media print {
-    .btn,
-    .save-pdf {
-      visibility: hidden;
-      display: none;
-    }
+@media print {
+  .btn,
+  .save-pdf {
+    visibility: hidden;
+    display: none;
+  }
 
-    .align-center {
-      display: block;
-      justify-content: flex-start;
-    }
+  .align-center {
+    display: block;
+    justify-content: flex-start;
+  }
 
-    .input-container,
-    .table-container {
-      overflow: visible;
-    }
-    .content {
-      transform: rotate(90deg);
-      margin-left: 250px;
-    }
-    #main-table > tbody > tr > td.results {
-      min-width: 0px;
-    }
-    .units-column {
-      min-width: 0px;
-    }
+  .input-container,
+  .table-container {
+    overflow: visible;
+  }
+  body {
+    transform: rotate(90deg);
+    margin-top: 150px;
+  }
+  #main-table > tbody > tr > td.results {
+    min-width: 0px;
+  }
+  .units-column {
+    min-width: 0px;
+  }
 
-    #main-table,
-    .input-table {
-      width: 250mm;
-    }
-    #main-table > tbody > tr > td,
-    .input-table > tbody > tr > td {
-      padding: 0 5px;
-    }
-    @page {
-      margin: 0px;
-      size: portrait;
-    }
+  #main-table,
+  .input-table {
+    width: 250mm;
+  }
+  #main-table > tbody > tr > td,
+  .input-table > tbody > tr > td {
+    padding: 0 5px;
+  }
+  @page {
+    margin: 0px;
+    size: portrait;
   }
 }
