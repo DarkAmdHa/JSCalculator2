@@ -43,6 +43,8 @@ input {
 
 #type {
   margin-bottom: 5px;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
 }
 .header label,
 p {
@@ -72,6 +74,9 @@ p {
   border: 3px solid black;
   width: 1065px;
   background: #fff;
+}
+#main-table {
+  margin-left: 5px;
 }
 
 #main-table > tbody > tr > td,
@@ -119,22 +124,30 @@ input {
   top: 0;
 }
 
-.primary-output {
+.primary-output,
+.secondary-output,
+.total-output {
   border: none;
   background: transparent;
-  font-size: 1.5rem;
   width: 100%;
-  font-weight: bold;
-  margin: 0 1px;
   cursor: text;
 }
 
+.primary-output {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 1px;
+}
+
 .secondary-output {
-  border: none;
-  background: transparent;
-  width: 100%;
-  cursor: text;
   font-size: 0.8rem;
+}
+
+.total-output {
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 100;
+  -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 #main-table tr.main-table-row:nth-child(even) {
@@ -190,6 +203,13 @@ input {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+span.small.bold {
+  margin-bottom: 3px;
+}
+td > table {
+  width: 100%;
 }
 
 .part-a,
@@ -257,6 +277,10 @@ input {
   color: #fff;
 }
 
+#main-table tr.main-table-row.total-row td {
+  padding: 0 2px;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;
@@ -311,7 +335,7 @@ input {
 
 .product-name {
   font-size: 1.5rem;
-  margin-bottom: -5px;
+  margin-bottom: 0px;
 }
 
 .align-center {
@@ -356,9 +380,9 @@ input {
   .table-container {
     overflow: visible;
   }
-  body {
+  .content {
     transform: rotate(90deg);
-    margin-top: 40px;
+    margin: 40px;
   }
   #main-table > tbody > tr > td.results {
     min-width: 0px;
@@ -372,6 +396,13 @@ input {
   .input-table > tbody > tr > td {
     padding: 0 5px;
   }
+  .units-column {
+    min-width: 0;
+  }
+  .header {
+    margin-left: 10rem;
+  }
+
   @page {
     size: portrait;
   }
