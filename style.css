@@ -206,6 +206,11 @@ input {
   height: 100%;
   writing-mode: vertical-rl;
 }
+
+.grayed-out {
+  background: #808080;
+  -webkit-print-color-adjust: exact;
+}
 .header {
   display: flex;
   align-items: center;
@@ -248,7 +253,7 @@ td > table {
 
 .btn,
 .save-pdf {
-  height: fit-content;
+  height: 40px;
   margin-left: 1rem;
   margin-top: 1rem;
   cursor: pointer;
