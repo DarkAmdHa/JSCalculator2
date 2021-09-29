@@ -36,6 +36,20 @@ input {
   font-size: 1.2rem;
 }
 
+.header h1 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#type {
+  margin-bottom: 5px;
+}
+.header label,
+p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
 .table-container {
   opacity: 0;
   transform: translateX(-500px);
@@ -54,18 +68,10 @@ input {
 }
 
 #main-table,
-.input-table,
-.responsive-table {
+.input-table {
   border: 3px solid black;
   width: 1065px;
-}
-
-.responsive-table {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-.responsive-table > tbody > tr > td {
-  border-right: 3px solid black;
+  background: #fff;
 }
 
 #main-table > tbody > tr > td,
@@ -80,8 +86,7 @@ input {
 }
 
 .input-table > tbody > tr,
-#main-table > tbody > tr,
-.responsive-table > tbody > tr {
+#main-table > tbody > tr {
   border-bottom: 3px solid black;
 }
 
@@ -353,25 +358,21 @@ input {
   }
   body {
     transform: rotate(90deg);
-    margin-top: 150px;
+    margin-top: 40px;
   }
   #main-table > tbody > tr > td.results {
-    min-width: 0px;
-  }
-  .units-column {
     min-width: 0px;
   }
 
   #main-table,
   .input-table {
-    width: 250mm;
+    width: 210mm;
   }
   #main-table > tbody > tr > td,
   .input-table > tbody > tr > td {
     padding: 0 5px;
   }
   @page {
-    margin: 0px;
     size: portrait;
   }
 }
