@@ -469,6 +469,10 @@ function setInputTableDimensions(){
     document.querySelector('.input-5').style.width = `${document.querySelector('.week5').offsetWidth + 3}px`;
     document.querySelector('.input-6').style.width = `${document.querySelector('.week6').offsetWidth + 3}px`;
     document.querySelector('.input-7').style.width = `${document.querySelector('.week7').offsetWidth + 3}px`;
+    document.querySelectorAll('.grayed-out').forEach((gray)=>{
+        gray.style.width = `${document.querySelector('.flush').offsetWidth}px`;
+        console.log('Yay');
+    })
     document.querySelector('.input-8').style.width = `${document.querySelector('.week8').offsetWidth + 3}px`;
     document.querySelector('.input-9').style.width = `${document.querySelector('.week9').offsetWidth + 3}px`;
     document.querySelector('.input-10').style.width = `${document.querySelector('.week10').offsetWidth + 3}px`;
