@@ -382,7 +382,7 @@ td > table {
   }
   .content {
     transform: rotate(90deg);
-    margin: 40px;
+    margin-top: 25px;
   }
   #main-table > tbody > tr > td.results {
     min-width: 0px;
