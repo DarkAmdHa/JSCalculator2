@@ -225,6 +225,11 @@ td > table {
   width: 100%;
 }
 
+#main-table > tbody > tr > td.units,
+.input-table > tbody > tr > td.units {
+  padding: 0 3px;
+}
+
 .part-a,
 .part-b,
 .bloom {
@@ -343,7 +348,7 @@ td > table {
 }
 
 .units-column {
-  min-width: 130px;
+  min-width: 115px;
 }
 
 .product-name {
