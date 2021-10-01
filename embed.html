@@ -1,0 +1,1365 @@
+<style>
+    .content *{
+box-sizing: border-box;
+font-family: "Montserrat", sans-serif;
+}
+
+h1,p{
+margin: 0;
+padding: 0;
+}
+
+/* Reduce width of scrollbars inside tables in case of overflow */
+.results::-webkit-scrollbar {
+width: 1px;
+height: 1px;
+}
+
+/* Removing up and down arrows from number input */
+input[type="number"] {
+-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+text-align: center;
+text-transform: uppercase;
+}
+
+th {
+font-family: Industrial, sans-serif !important;
+}
+
+.main-table-row-header > * {
+font-family: inherit;
+}
+
+input {
+text-align: center;
+outline: none;
+-webkit-text-fill-color: rgba(0, 0, 0, 1);
+-webkit-opacity: 1;
+padding: 0.4rem 0;
+font-size: 1.2rem;
+}
+
+.header h1 {
+text-transform: uppercase;
+margin-bottom: 30px;
+}
+
+#type {
+margin-bottom: 5px;
+font-size: 1rem;
+padding: 0.2rem 0.5rem;
+}
+.header label,
+p {
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.table-container {
+opacity: 0;
+transform: translateX(-500px);
+transition: 1s ease;
+overflow-x: auto;
+width: 95%;
+max-width: 1085px;
+margin-top: 1rem;
+margin-left: 1rem;
+padding-bottom: 5px;
+}
+
+.save-pdf {
+opacity: 0;
+transform: translateX(-500px);
+transition: 1s ease;
+}
+
+#main-table,
+.input-table {
+border: 3px solid black;
+width: 1065px;
+background: #fff;
+}
+#main-table {
+margin-left: 5px;
+}
+
+#main-table > tbody > tr > td,
+.input-table > tbody > tr > td {
+border-right: 3px solid black;
+padding: 0 12px;
+}
+
+#main-table th,
+.input-table th {
+border-right: 3px solid black;
+}
+
+.input-table > tbody > tr,
+#main-table > tbody > tr {
+border-bottom: 3px solid black;
+}
+
+.small {
+font-size: 9px;
+display: block;
+}
+
+.medium {
+font-size: 11px;
+padding-top: 14px;
+}
+input {
+text-align: center;
+outline: none;
+}
+
+.dotted {
+border-right-width: 0px !important;
+position: relative;
+}
+
+.dotted:before {
+content: "";
+position: absolute;
+width: 0;
+height: 100%;
+border-right: 3px dashed black;
+right: -1px;
+top: 0;
+}
+
+.primary-output,
+.secondary-output {
+border: none;
+background: transparent;
+width: 100%;
+cursor: text;
+}
+
+.primary-output {
+font-size: 1.5rem;
+font-weight: bold;
+margin: 0 1px;
+}
+
+.secondary-output {
+font-size: 0.8rem;
+}
+
+#main-table tr.main-table-row:nth-child(even) {
+background: #cccccc;
+-webkit-print-color-adjust: exact;
+}
+
+.input {
+width: 98%;
+}
+
+.flush {
+text-transform: uppercase;
+background: #808080;
+-webkit-print-color-adjust: exact;
+color: white;
+position: relative;
+font-weight: bold;
+width: 52.3px;
+}
+
+.flush:before {
+content: "30";
+position: absolute;
+bottom: 5px;
+margin-left: 1px;
+width: 1.5rem;
+height: 1.5rem;
+background-color: white;
+-webkit-print-color-adjust: exact;
+color: black;
+border-radius: 50%;
+writing-mode: initial;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.9rem;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.flush p {
+margin-bottom: 2rem;
+position: absolute;
+top: 50%;
+left: 50%;
+height: 250px;
+transform: translate(-50%, -50%);
+height: 100%;
+writing-mode: vertical-rl;
+}
+
+.grayed-out {
+background: #808080;
+-webkit-print-color-adjust: exact;
+}
+.header {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+span.small.bold {
+margin-bottom: 3px;
+}
+td > table {
+width: 100%;
+}
+
+#main-table > tbody > tr > td.units,
+.input-table > tbody > tr > td.units {
+padding: 0 3px;
+}
+
+.part-a,
+.part-b,
+.bloom {
+color: white;
+font-size: 0.8rem;
+padding: 0.05rem 0.6rem;
+}
+
+.part-a {
+background: #3fb34f;
+-webkit-print-color-adjust: exact;
+}
+
+.part-b {
+background-color: #1073b9;
+-webkit-print-color-adjust: exact;
+}
+.bloom {
+background: #bf2932;
+-webkit-print-color-adjust: exact;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.btn,
+.save-pdf {
+height: 50px;
+margin-left: 1rem;
+margin-top: 1rem;
+cursor: pointer;
+font-weight: bold;
+border-radius: 65px;
+color: #333;
+background: #fff;
+text-transform: uppercase;
+/* text-align: center; */
+font-family: Industrial, sans-serif;
+font-size: 16px;
+padding: 0.25rem 1.4rem;
+font-weight: 400;
+letter-spacing: 0.5px;
+border-color: #333;
+outline: none;
+transition: all 0.5s ease-out;
+}
+
+.btn:hover,
+.save-pdf:hover {
+background: #910000;
+color: #fff;
+}
+
+.greyed-out {
+background: #808080;
+-webkit-print-color-adjust: exact;
+}
+
+#main-table tr.main-table-row.total-row {
+background-color: #333;
+height: 2.5rem;
+color: #fff;
+}
+
+#main-table tr.main-table-row.total-row td {
+padding: 0 2px;
+}
+
+.buttons {
+display: flex;
+flex-direction: column;
+}
+
+.bold-digit {
+font-weight: bold;
+font-size: 1.25rem;
+}
+
+.input-row {
+height: 3rem;
+}
+
+#main-table > tbody > tr > td.results {
+padding: 0;
+min-width: 70px;
+max-width: 80px;
+}
+.innerDiv {
+overflow-x: auto;
+}
+.innerDiv::-webkit-scrollbar {
+width: 1px;
+height: 1px;
+}
+
+.input-unit {
+width: 126.18px;
+}
+
+.input-table th {
+border-right: 3px solid black;
+}
+
+.input-container {
+overflow-x: auto;
+width: 95%;
+max-width: 1085px;
+margin-top: 1rem;
+margin-left: 1rem;
+padding-bottom: 5px;
+}
+
+.input-container .flush:before {
+display: none;
+}
+
+.units-column {
+min-width: 115px;
+}
+
+.product-name {
+font-size: 1.5rem;
+margin-bottom: 0px;
+}
+
+.align-center {
+display: flex;
+justify-content: center;
+}
+
+.input-table > tbody > tr > td.input-1,
+.input-table > tbody > tr > td.input-2,
+.input-table > tbody > tr > td.input-3,
+.input-table > tbody > tr > td.input-4,
+.input-table > tbody > tr > td.input-5,
+.input-table > tbody > tr > td.input-6,
+.input-table > tbody > tr > td.input-7,
+.input-table > tbody > tr > td.input-8,
+.input-table > tbody > tr > td.input-9,
+.input-table > tbody > tr > td.input-10 {
+padding: 0 0.2rem;
+}
+
+@media (max-width: 768px) {
+.align-center {
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+}
+
+@media print {
+.btn,
+.save-pdf {
+visibility: hidden;
+display: none;
+}
+
+.align-center {
+display: block;
+justify-content: flex-start;
+}
+
+.input-container,
+.table-container {
+overflow: visible;
+}
+/* Rotating the entire content */
+.content {
+transform: rotate(90deg);
+margin-top: 25px;
+}
+#main-table > tbody > tr > td.results {
+min-width: 0px;
+}
+
+#main-table,
+.input-table {
+width: 210mm;
+}
+#main-table > tbody > tr > td,
+.input-table > tbody > tr > td {
+padding: 0 5px;
+}
+.units-column {
+min-width: 0;
+font-family: inherit;
+}
+.header {
+margin-left: 10rem;
+}
+.primary-output {
+font-size: 1rem;
+}
+.secondary-output {
+font-size: 0.8rem;
+}
+
+@page {
+size: portrait;
+}
+}
+
+</style>
+    <div class="content">
+            
+        <div class="header">
+            <h1>Custom Feed Chart</h1>
+            <label for="type">1. Select Irrigation Method</label>
+            <select id="type" name="type" onchange='calculateValues()'>
+                <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
+                <option value="conc">Stock Concentrate (mL/Gal)</option>
+            </select>
+            <p style='margin-bottom:-5px'>2. Input Weekly EC Targets</p>
+        </div>
+
+        <div class='align-center'>
+            <div class="input-container">
+                <table class="input-table">
+                    <tr class='main-table-row'>
+                        <th colspan="2"></th>
+                        <th colspan='3' class='bold'>Veg Cycle</th>
+                        <th colspan='9' class='bold'>Flower Cycle</th>
+                    </tr>
+                    <tr class='main-table-row input-row'>
+                        <td class='ec_target bold'>EC Targets</td>
+                        <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        
+                        <td class='input-1 results dotted'>
+                            <input type="number" class='input veg1' placeholder='0'>
+                        </td>
+
+                        <td class='input-2 results dotted'>
+                            <input type="number" class='input veg2' placeholder='0'>
+                        </td>
+
+                        <td class='input-3 results'>
+                            <input type="number" class='input veg3' placeholder='0'>
+                        </td>
+
+                        <td class='input-4 results dotted'>
+                            <input type="number" class='input flow1' placeholder='0'>
+                        </td>
+
+                        <td class='input-5 results dotted'>
+                            <input type="number" class='input flow2' placeholder='0'>
+                        </td>
+                        <td class='input-6 results dotted'>
+                            <input type="number" class='input flow3' placeholder='0'>
+                        </td>
+        
+                        <td class='input-7 results'>
+                            <input type="number" class='input flow4' placeholder='0'>
+                        </td>
+
+                        <td class='grayed-out'></td>
+        
+                    
+                        <td class='input-8 results dotted'>
+                            <input type="number" class='input flow5' placeholder='0'>
+                        </td>
+
+                        <td class='input-9 results dotted'>
+                            <input type="number" class='input flow6' placeholder='0'>
+                        </td>
+
+                        <td class='input-10 results'>
+                            <input type="number" class='input flow7' placeholder='0'>
+                        </td>
+
+                        <td class='grayed-out'></td>
+        
+                    </tr>
+                </table>
+        
+            </div>
+
+            <button class="btn calculate_button">Calculate</button>
+        </div>
+
+        <div class='align-center'>
+        <div class="table-container">
+
+        <table id='main-table'>          
+            <tr class='main-table-row main-table-row-header'>
+                <td class='product bold'>Product</td>
+                <td class='units-column bold'>Units</td>
+                <td class='week1'><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td class='week2'><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td class='week3'><span class='bold-digit'>3+</span><br><span class='small bold'>Week</span></td>
+                <td class='week4'><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td class='week5'><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td class='week6'><span class='bold-digit'>3</span><br><span class='small bold'>Week</span></td>
+                <td class='week7'><span class='bold-digit'>4</span><br><span class='small bold'>Week</span></td>
+                <td class='flush1'><span class="small bold"> Flush</span></td>
+                <td class='week8'><span class='bold-digit'>5</span><br><span class='small bold'>Week</span></td>
+                <td class='week9'><span class='bold-digit'>6</span><br><span class='small bold'>Week</span></td>
+                <td class='week10'><span class='bold-digit'>7</span><br><span class='small bold'>Week</span></td>
+                <td class='flush2'><span class='bold-digit'>8+</span><br><span class='small bold'>Week</span></td>
+            </tr>
+            
+            
+
+            <tr class='main-table-row'>
+                <td class='dotted bold'><p class='product-name'>PART-A</p>
+                    <span class='part-a'>14-0-8</span>
+                </td>
+                <td class='units'>
+                    <table>
+                        <tr>
+                            <td class='bold'>  <span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr><td class='medium bold'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg1_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg1_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg2_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg2_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg3_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg3_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow1_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow1_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow2_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow2_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow3_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow3_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-4 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow4_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow4_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+
+                <td rowspan="8" class='flush'><p>One-day Flush</p> </td>
+                
+                <td class='week-5 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow5_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow5_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-6 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow6_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow6_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-7 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow7_pA_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow7_pA_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td rowspan="8" class='flush'><p>One-Week Flush</p></td>
+            </tr>
+
+            <tr class='main-table-row'>
+                <td class='dotted bold'><p class="product-name">PART-B</p>
+                    <span class='part-b'>2-13-17</span>
+                </td>
+                <td class='units'>
+                    <table>
+                        <tr>
+                            <td class='bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr class='bold'><td class='medium'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg1_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg1_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg2_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg2_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg3_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg3_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow1_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow1_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow2_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow2_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow3_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow3_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-4 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow4_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow4_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+
+                
+                <td class='week-5 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow5_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow5_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-6 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow6_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow6_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-7 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow7_pB_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow7_pB_out2' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+            
+
+            <tr class='main-table-row'>
+                <td class='dotted bold'><p class='product-name'>Bloom</p>
+                    <span class='bloom'>0-35-29</span>
+                </td>
+                <td class='units'>
+                    <table>
+                        <tr>
+                            <td class='bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr><td class='medium bold'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg1_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg1_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg2_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg2_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output veg3_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg3_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow1_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow1_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-2 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow2_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow2_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-3 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow3_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow3_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-4 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow4_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow4_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+
+                
+                <td class='week-5 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow5_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow5_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-6 results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow6_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow6_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-7 results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='primary-output flow7_blm_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow7_blm_out2' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            
+            <tr class='main-table-row'>
+                <td class='dotted bold'>Front-Row SI</td>
+                <td class='bold units'>ML <span class='small'>per gallon</span></td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_veg1' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_veg2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_veg3' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow1' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow3' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow4' disabled></td></tr>
+                    </table>
+                </td>
+
+            
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow5' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results dotted'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow6' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='results'>
+                    <table>
+                        <tr><td style='width: 100%;'><input type="text" class='secondary-output si_flow7' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr class='main-table-row total-row'>
+                <td colspan="2" class='bold'>Total EC
+                </td>
+                <td class='veg1_total dotted'></td>
+                <td class='veg2_total dotted'></td>
+                <td class='veg3_total'></td>
+                <td class='flow1_total dotted'></td>
+                <td class='flow2_total dotted'></td>
+                <td class='flow3_total dotted'><input type="number" class="total-output" disasbled></td>
+                <td class='flow4_total'></td>
+                <td class='flow5_total dotted'></td>
+                <td class='flow6_total dotted'></td>
+                <td class='flow7_total'></td>
+            </tr>
+        
+        </table>
+        <!-- <table class="responsive-table">
+            <tr class="main-table-row">
+                <td class="bold product">Product</td>
+                <td class=' bold'>PART-A <br>
+                    <span class='part-a'>14-0-8</span>
+                </td>
+                <td class='bold'>PART-B <br>
+                    <span class='part-b'>2-13-17</span>
+                </td>
+                <td class='bold'>Bloom <br>
+                    <span class='bloom'>0-35-29</span>
+                </td>
+                <td class='bold'>Front-Row SI</td>
+                <td class='bold'>Total EC
+                </td>
+            </tr>
+            <tr class="main-table-row">
+                <td class='bold'>Units</td>
+                <td><table>
+                    <tr>
+                        <td class='bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        <td class='medium bold'>EC Contributed</td>
+                    </tr>
+                    
+                </table></td>
+            </tr>
+        </table> -->
+    </div>
+    <button class="save-pdf">Save As PDF</button>
+        </div>
+    </div>
+<script>
+    //When "Calculate" pressed:
+document.querySelector(".calculate_button").addEventListener('click', calculateValues);
+document.querySelector(".calculate_button").addEventListener('click', displayTable);
+
+//When saveAsPDF is pressed
+document.querySelector('.save-pdf').addEventListener('click', saveAsPDF);
+
+//When DOM loads, calculate initial values(0.0)
+document.addEventListener('DOMContentLoaded', calculateValues());
+document.addEventListener('DOMContentLoaded', () =>{
+    document.querySelector('.table-container').style.display = 'none';
+    document.querySelector('.save-pdf').style.display='none';
+});
+
+
+//Calculate and displays all the  values inseide the table when "calculate" clicked, or when the unirs are changed from the dropdown menu 
+function calculateValues(e) {
+ 
+  const input = document.querySelectorAll('.input');
+  const select = document.getElementById('type');
+  const unit = document.querySelectorAll('.unit');
+  
+
+  const ptA_EC   = 0.322;
+  const ptB_EC   = 0.255;
+  const blm_EC   = 0.18;
+  
+  const ptA_veg  = 4.04;
+  const ptB_veg  = 2.7;
+      
+  const ptA_flow = 3.25;
+  const ptB_flow = 2.18;
+  const blm_flow = 2.56;
+
+  const ptB_mLc = 570/3785;
+  const blm_mLc = 667/3785;
+
+  let veg1_ptA_out2 = ((input[0].value/2)*(ptA_EC * ptA_veg));
+  let veg2_ptA_out2 = ((input[1].value/2)*(ptA_EC * ptA_veg));
+  let veg3_ptA_out2 = ((input[2].value/2)*(ptA_EC * ptA_veg));
+  let flow1_ptA_out2 = ((input[3].value/2)*(ptA_EC * ptA_flow));
+  let flow2_ptA_out2 = ((input[4].value/2)*(ptA_EC * ptA_flow));
+  let flow3_ptA_out2 = ((input[5].value/2)*(ptA_EC * ptA_flow));
+  let flow4_ptA_out2 = ((input[6].value/2)*(ptA_EC * ptA_flow * 0.95));
+  let flow5_ptA_out2 = ((input[7].value/2)*(ptA_EC * ptA_flow * 0.95));
+  let flow6_ptA_out2 = ((input[8].value/2)*(ptA_EC * ptA_flow * 0.9));
+  let flow7_ptA_out2 = ((input[9].value/2)*(ptA_EC * ptA_flow * 0.9));
+  
+  let veg1_ptB_out2 = ((input[0].value/2)*(ptB_EC * ptB_veg));
+  let veg2_ptB_out2 = ((input[1].value/2)*(ptB_EC * ptB_veg));
+  let veg3_ptB_out2 = ((input[2].value/2)*(ptB_EC * ptB_veg));
+  let flow1_ptB_out2 = ((input[3].value/2)*(ptB_EC * ptB_flow));
+  let flow2_ptB_out2 = ((input[4].value/2)*(ptB_EC * ptB_flow));
+  let flow3_ptB_out2 = ((input[5].value/2)*(ptB_EC * ptB_flow));
+  let flow4_ptB_out2 = ((input[6].value/2)*(ptB_EC * ptB_flow * 0.95));
+  let flow5_ptB_out2 = ((input[7].value/2)*(ptB_EC * ptB_flow * 0.95));
+  let flow6_ptB_out2 = ((input[8].value/2)*(ptB_EC * ptB_flow * 0.9));
+  let flow7_ptB_out2 = ((input[9].value/2)*(ptB_EC * ptB_flow * 0.9));
+      
+  let veg1_blm_out2 = 0;
+  let veg2_blm_out2 = 0;
+  let veg3_blm_out2 = 0;
+  let flow1_blm_out2 = ((input[3].value/2)*(blm_EC * blm_flow * 0.95));
+  let flow2_blm_out2 = ((input[4].value/2)*(blm_EC * blm_flow * 0.95));
+  let flow3_blm_out2 = ((input[5].value/2)*(blm_EC * blm_flow * 0.95));
+  let flow4_blm_out2 = ((input[6].value/2)*(blm_EC * blm_flow * 1.1));
+  let flow5_blm_out2 = ((input[7].value/2)*(blm_EC * blm_flow * 1.1));
+  let flow6_blm_out2 = ((input[8].value/2)*(blm_EC * blm_flow * 1.15));
+  let flow7_blm_out2 = ((input[9].value/2)*(blm_EC * blm_flow * 1.15));
+  
+  document.querySelector('.veg1_pA_out2').value = veg1_ptA_out2.toFixed(2);
+  document.querySelector(".veg2_pA_out2").value = veg2_ptA_out2.toFixed(2);
+  document.querySelector(".veg3_pA_out2").value = veg3_ptA_out2.toFixed(2);
+  document.querySelector(".flow1_pA_out2").value = flow1_ptA_out2.toFixed(2);
+  document.querySelector(".flow2_pA_out2").value = flow2_ptA_out2.toFixed(2);
+  document.querySelector(".flow3_pA_out2").value = flow3_ptA_out2.toFixed(2);
+  document.querySelector(".flow4_pA_out2").value = flow4_ptA_out2.toFixed(2);
+  document.querySelector(".flow5_pA_out2").value = flow5_ptA_out2.toFixed(2);
+  document.querySelector(".flow6_pA_out2").value = flow6_ptA_out2.toFixed(2);
+  document.querySelector(".flow7_pA_out2").value = flow7_ptA_out2.toFixed(2);
+  
+  document.querySelector('.veg1_pB_out2').value = veg1_ptB_out2.toFixed(2);
+  document.querySelector('.veg2_pB_out2').value = veg2_ptB_out2.toFixed(2);
+  document.querySelector('.veg3_pB_out2').value = veg3_ptB_out2.toFixed(2);
+  document.querySelector('.flow1_pB_out2').value = flow1_ptB_out2.toFixed(2);
+  document.querySelector('.flow2_pB_out2').value = flow2_ptB_out2.toFixed(2);
+  document.querySelector('.flow3_pB_out2').value = flow3_ptB_out2.toFixed(2);
+  document.querySelector('.flow4_pB_out2').value = flow4_ptB_out2.toFixed(2);
+  document.querySelector('.flow5_pB_out2').value = flow5_ptB_out2.toFixed(2);
+  document.querySelector('.flow6_pB_out2').value = flow6_ptB_out2.toFixed(2);
+  document.querySelector('.flow7_pB_out2').value = flow7_ptB_out2.toFixed(2);
+  
+  document.querySelector('.veg1_blm_out2').value = veg1_blm_out2.toFixed(2);
+  document.querySelector('.veg2_blm_out2').value = veg2_blm_out2.toFixed(2);
+  document.querySelector('.veg3_blm_out2').value = veg3_blm_out2.toFixed(2);
+  document.querySelector('.flow1_blm_out2').value = flow1_blm_out2.toFixed(2);
+  document.querySelector('.flow2_blm_out2').value = flow2_blm_out2.toFixed(2);
+  document.querySelector('.flow3_blm_out2').value = flow3_blm_out2.toFixed(2);
+  document.querySelector('.flow4_blm_out2').value = flow4_blm_out2.toFixed(2);
+  document.querySelector('.flow5_blm_out2').value = flow5_blm_out2.toFixed(2);
+  document.querySelector('.flow6_blm_out2').value = flow6_blm_out2.toFixed(2);
+  document.querySelector('.flow7_blm_out2').value = flow7_blm_out2.toFixed(2);
+  
+  document.querySelector('.veg1_total').innerText = (Number(veg1_ptA_out2) + Number(veg1_ptB_out2)).toFixed(2);
+  document.querySelector('.veg2_total').innerText = (Number(veg2_ptA_out2) + Number(veg2_ptB_out2)).toFixed(2);
+  document.querySelector('.veg3_total').innerText = (Number(veg3_ptA_out2) + Number(veg3_ptB_out2)).toFixed(2);
+  document.querySelector('.flow1_total').innerText = (Number(flow1_ptA_out2) + Number(flow1_ptB_out2) + Number(flow1_blm_out2)).toFixed(2);
+  document.querySelector('.flow2_total').innerText = (Number(flow2_ptA_out2) + Number(flow2_ptB_out2) + Number(flow2_blm_out2)).toFixed(2);
+  document.querySelector('.flow3_total').innerText = (Number(flow3_ptA_out2) + Number(flow3_ptB_out2) + Number(flow3_blm_out2)).toFixed(2);
+  document.querySelector('.flow4_total').innerText = (Number(flow4_ptA_out2) + Number(flow4_ptB_out2) + Number(flow4_blm_out2)).toFixed(2);
+  document.querySelector('.flow5_total').innerText = (Number(flow5_ptA_out2) + Number(flow5_ptB_out2) + Number(flow5_blm_out2)).toFixed(2);
+  document.querySelector('.flow6_total').innerText = (Number(flow6_ptA_out2) + Number(flow6_ptB_out2) + Number(flow6_blm_out2)).toFixed(2);
+  document.querySelector('.flow7_total').innerText = (Number(flow7_ptA_out2) + Number(flow7_ptB_out2) + Number(flow7_blm_out2)).toFixed(2);
+  
+
+  let veg1_ptA_g = ((veg1_ptA_out2)/ptA_EC);
+  let veg2_ptA_g = ((veg2_ptA_out2)/ptA_EC);
+  let veg3_ptA_g = ((veg3_ptA_out2)/ptA_EC);
+  let flow1_ptA_g = ((flow1_ptA_out2)/ptA_EC);
+  let flow2_ptA_g = ((flow2_ptA_out2)/ptA_EC);
+  let flow3_ptA_g = ((flow3_ptA_out2)/ptA_EC);
+  let flow4_ptA_g = ((flow4_ptA_out2)/ptA_EC);
+  let flow5_ptA_g = ((flow5_ptA_out2)/ptA_EC);
+  let flow6_ptA_g = ((flow6_ptA_out2)/ptA_EC);
+  let flow7_ptA_g = ((flow7_ptA_out2)/ptA_EC);
+  
+  let veg1_ptB_g = ((veg1_ptB_out2)/ptB_EC);
+  let veg2_ptB_g = ((veg2_ptB_out2)/ptB_EC);
+  let veg3_ptB_g = ((veg3_ptB_out2)/ptB_EC);
+  let flow1_ptB_g = ((flow1_ptB_out2)/ptB_EC);
+  let flow2_ptB_g = ((flow2_ptB_out2)/ptB_EC);
+  let flow3_ptB_g = ((flow3_ptB_out2)/ptB_EC);
+  let flow4_ptB_g = ((flow4_ptB_out2)/ptB_EC);
+  let flow5_ptB_g = ((flow5_ptB_out2)/ptB_EC);
+  let flow6_ptB_g = ((flow6_ptB_out2)/ptB_EC);
+  let flow7_ptB_g = ((flow7_ptB_out2)/ptB_EC);
+  
+  let veg1_blm_g = 0;
+  let veg2_blm_g = 0;
+  let veg3_blm_g = 0;
+  let flow1_blm_g = ((flow1_blm_out2)/blm_EC);
+  let flow2_blm_g = ((flow2_blm_out2)/blm_EC);
+  let flow3_blm_g = ((flow3_blm_out2)/blm_EC);
+  let flow4_blm_g = ((flow4_blm_out2)/blm_EC);
+  let flow5_blm_g = ((flow5_blm_out2)/blm_EC);
+  let flow6_blm_g = ((flow6_blm_out2)/blm_EC);
+  let flow7_blm_g = ((flow7_blm_out2)/blm_EC);
+  //TODO: Add an error if an option was not selected
+  if (select.value == "DtL")
+  {
+      document.querySelector('.veg1_pA_out1').value = veg1_ptA_g.toFixed(1);
+      document.querySelector('.veg2_pA_out1').value = veg2_ptA_g.toFixed(1);
+      document.querySelector('.veg3_pA_out1').value = veg3_ptA_g.toFixed(1);
+      document.querySelector('.flow1_pA_out1').value = flow1_ptA_g.toFixed(1);
+      document.querySelector('.flow2_pA_out1').value = flow2_ptA_g.toFixed(1);
+      document.querySelector('.flow3_pA_out1').value = flow3_ptA_g.toFixed(1);
+      document.querySelector('.flow4_pA_out1').value = flow4_ptA_g.toFixed(1);
+      document.querySelector('.flow5_pA_out1').value = flow5_ptA_g.toFixed(1);
+      document.querySelector('.flow6_pA_out1').value = flow6_ptA_g.toFixed(1);
+      document.querySelector('.flow7_pA_out1').value = flow7_ptA_g.toFixed(1);
+      
+      document.querySelector('.veg1_pB_out1').value = veg1_ptB_g.toFixed(1);
+      document.querySelector('.veg2_pB_out1').value = veg2_ptB_g.toFixed(1);
+      document.querySelector('.veg3_pB_out1').value = veg3_ptB_g.toFixed(1);
+      document.querySelector('.flow1_pB_out1').value = flow1_ptB_g.toFixed(1);
+      document.querySelector('.flow2_pB_out1').value = flow2_ptB_g.toFixed(1);
+      document.querySelector('.flow3_pB_out1').value = flow3_ptB_g.toFixed(1);
+      document.querySelector('.flow4_pB_out1').value = flow4_ptB_g.toFixed(1);
+      document.querySelector('.flow5_pB_out1').value = flow5_ptB_g.toFixed(1);
+      document.querySelector('.flow6_pB_out1').value = flow6_ptB_g.toFixed(1);
+      document.querySelector('.flow7_pB_out1').value = flow7_ptB_g.toFixed(1);
+
+      document.querySelector('.veg1_blm_out1').value = veg1_blm_g.toFixed(1);
+      document.querySelector('.veg2_blm_out1').value = veg2_blm_g.toFixed(1);
+      document.querySelector('.veg3_blm_out1').value = veg3_blm_g.toFixed(1);
+      document.querySelector('.flow1_blm_out1').value = flow1_blm_g.toFixed(1);
+      document.querySelector('.flow2_blm_out1').value = flow2_blm_g.toFixed(1);
+      document.querySelector('.flow3_blm_out1').value = flow3_blm_g.toFixed(1);
+      document.querySelector('.flow4_blm_out1').value = flow4_blm_g.toFixed(1);
+      document.querySelector('.flow5_blm_out1').value = flow5_blm_g.toFixed(1);
+      document.querySelector('.flow6_blm_out1').value = flow6_blm_g.toFixed(1);
+      document.querySelector('.flow7_blm_out1').value = flow7_blm_g.toFixed(1);
+      unit.forEach(unit=>unit.innerText = "grams");
+
+    }
+
+  else if (select.value == "conc")
+  {
+      if (input[0].value == 2.4)
+      {
+          document.querySelector('.veg1_pA_out1').value = 22;
+      }
+      else
+      {
+          document.querySelector('.veg1_pA_out1').value = Math.floor(veg1_ptA_g/(849/3785));
+      }
+      if (input[1].value == 2.4)
+      {
+          document.querySelector('.veg2_pA_out1').value = 22;
+      }
+      else
+      {
+          document.querySelector('.veg2_pA_out1').value = Math.floor(veg2_ptA_g/(849/3785));
+      }
+      if (input[2].value == 2.4)
+      {
+          document.querySelector('.veg3_pA_out1').value = 22;
+      }
+      else
+      {
+          document.querySelector('.veg3_pA_out1').value = Math.floor(veg3_ptA_g/(849/3785));
+      }
+      
+      document.querySelector('.flow1_pA_out1').value = Math.round(flow1_ptA_g/(849/3785));
+      document.querySelector('.flow2_pA_out1').value = Math.round(flow2_ptA_g/(849/3785));
+      document.querySelector('.flow3_pA_out1').value = Math.round(flow3_ptA_g/(849/3785));
+      document.querySelector('.flow4_pA_out1').value = Math.round(flow4_ptA_g/(849/3785));
+      document.querySelector('.flow5_pA_out1').value = Math.round(flow5_ptA_g/(849/3785));
+      document.querySelector('.flow6_pA_out1').value = Math.round(flow6_ptA_g/(849/3785));
+      document.querySelector('.flow7_pA_out1').value = Math.round(flow7_ptA_g/(849/3785));
+
+      document.querySelector('.veg1_pB_out1').value = Math.round(veg1_ptB_g/(570/3785));
+      document.querySelector('.veg2_pB_out1').value = Math.round(veg2_ptB_g/(570/3785));
+      document.querySelector('.veg3_pB_out1').value = Math.round(veg3_ptB_g/(570/3785));
+      document.querySelector('.flow1_pB_out1').value = Math.round(flow1_ptB_g/(570/3785));
+      document.querySelector('.flow2_pB_out1').value = Math.round(flow2_ptB_g/(570/3785));
+      document.querySelector('.flow3_pB_out1').value = Math.round(flow3_ptB_g/(570/3785));
+      document.querySelector('.flow4_pB_out1').value = Math.round(flow4_ptB_g/(570/3785));
+      document.querySelector('.flow5_pB_out1').value = Math.round(flow5_ptB_g/(570/3785));
+      document.querySelector('.flow6_pB_out1').value = Math.round(flow6_ptB_g/(570/3785));
+      document.querySelector('.flow7_pB_out1').value = Math.round(flow7_ptB_g/(570/3785));
+
+
+      //the first 3 weeks need to be a conditionality
+      //if input >= 3: output = regular_calc+1; else output = regular_calc
+      document.querySelector('.veg1_blm_out1').value = veg1_blm_g;
+      document.querySelector('.veg2_blm_out1').value = veg2_blm_g;
+      document.querySelector('.veg3_blm_out1').value = veg3_blm_g;
+      if (input[3].value >= 3)
+      {
+          document.querySelector('.flow1_blm_out1').value = Math.ceil(flow1_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          document.querySelector('.flow1_blm_out1').value = Math.ceil(flow1_blm_g/(667/3785));
+      }
+      if (input[4].value >= 3)
+      {
+          document.querySelector('.flow2_blm_out1').value = Math.ceil(flow2_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          document.querySelector('.flow2_blm_out1').value = Math.ceil(flow2_blm_g/(667/3785));
+      }
+      if (input[5].value >= 3)
+      {
+          document.querySelector('.flow3_blm_out1').value = Math.ceil(flow3_blm_g/(667/3785))+1;
+      }
+      else
+      {
+          document.querySelector('.flow3_blm_out1').value = Math.round(flow3_blm_g/(667/3785));
+      }
+      document.querySelector('.flow4_blm_out1').value = Math.round(flow4_blm_g/(667/3785));
+      document.querySelector('.flow5_blm_out1').value = Math.round(flow5_blm_g/(667/3785));
+      document.querySelector('.flow6_blm_out1').value = Math.round(flow6_blm_g/(667/3785));
+      document.querySelector('.flow7_blm_out1').value = Math.round(flow7_blm_g/(667/3785));
+    
+
+      unit.forEach(unit=>unit.innerText = "ML");
+  }
+
+  if (input[0].value >= 3.5)
+  {
+    document.querySelector('.si_veg1').value = 0.125;
+  }
+  else if (input[0].value >= 2.7)
+  {
+    document.querySelector('.si_veg1').value = 0.25;
+  }
+  else if (input[0].value >= 2.3)
+  {
+    document.querySelector('.si_veg1').value = 0.33;
+  }
+  else
+  {
+    document.querySelector('.si_veg1').value = 0.5;
+  }
+
+  if (input[1].value >= 3.5)
+  {
+      document.querySelector('.si_veg2').value = Number(0.125);
+  }
+  else if (input[1].value >= 2.7)
+  {
+      document.querySelector('.si_veg2').value = Number(0.25);
+  }
+  else if (input[1].value >= 2.3)
+  {
+      document.querySelector('.si_veg2').value = 0.33;
+  }
+  else
+  {
+      document.querySelector('.si_veg2').value = 0.5;
+  }
+
+  if (input[2].value >= 3.5)
+  {
+      document.querySelector('.si_veg3').value = Number(0.125);
+  }
+  else if (input[2].value >= 2.7)
+  {
+      document.querySelector('.si_veg3').value = Number(0.25);
+  }
+  else if (input[2].value >= 2.3)
+  {
+      document.querySelector('.si_veg3').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_veg3').value = Number(0.5);
+  }
+
+  if (input[3].value >= 3.5)
+  {
+      document.querySelector('.si_flow1').value = Number(0.125);
+  }
+  else if (input[3].value >= 2.7)
+  {
+      document.querySelector('.si_flow1').value = Number(0.25);
+  }
+  else if (input[3].value >= 2.3)
+  {
+      document.querySelector('.si_flow1').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow1').value = Number(0.5);
+  }
+
+  if (input[4].value >= 3.5)
+  {
+      document.querySelector('.si_flow2').value = Number(0.125);
+  }
+  else if (input[4].value >= 2.7)
+  {
+      document.querySelector('.si_flow2').value = Number(0.25);
+  }
+  else if (input[4].value >= 2.3)
+  {
+      document.querySelector('.si_flow2').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow2').value = Number(0.5);
+  }
+
+  if (input[5].value >= 3.5)
+  {
+      document.querySelector('.si_flow3').value = Number(0.125);
+  }
+  else if (input[5].value >= 2.7)
+  {
+      document.querySelector('.si_flow3').value = Number(0.25);
+  }
+  else if (input[5].value >= 2.3)
+  {
+      document.querySelector('.si_flow3').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow3').value = Number(0.5);
+  }
+
+  if (input[6].value >= 3.5)
+  {
+      document.querySelector('.si_flow4').value = Number(0.125);
+  }
+  else if (input[6].value >= 2.7)
+  {
+      document.querySelector('.si_flow4').value = Number(0.25);
+  }
+  else if (input[6].value >= 2.3)
+  {
+      document.querySelector('.si_flow4').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow4').value = Number(0.5);
+  }
+
+  if (input[7].value >= 3.5)
+  {
+      document.querySelector('.si_flow5').value = Number(0.125);
+  }
+  else if (input[7].value >= 2.7)
+  {
+      document.querySelector('.si_flow5').value = Number(0.25);
+  }
+  else if (input[7].value >= 2.3)
+  {
+      document.querySelector('.si_flow5').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow5').value = Number(0.5);
+  }
+
+  if (input[8].value >= 3.5)
+  {
+      document.querySelector('.si_flow6').value = Number(0.125);
+  }
+  else if (input[8].value >= 2.7)
+  {
+      document.querySelector('.si_flow6').value = Number(0.25);
+  }
+  else if (input[8].value >= 2.3)
+  {
+      document.querySelector('.si_flow6').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow6').value = Number(0.5);
+  }
+
+  if (input[9].value >= 3.5)
+  {
+      document.querySelector('.si_flow7').value = Number(0.125);
+  }
+  else if (input[9].value >= 2.7)
+  {
+      document.querySelector('.si_flow7').value = Number(0.25);
+  }
+  else if (input[9].value >= 2.3)
+  {
+      document.querySelector('.si_flow7').value = Number(0.33);
+  }
+  else
+  {
+      document.querySelector('.si_flow7').value = Number(0.5);
+  }
+}
+
+//Print prompt when "Save As PDF" button is pressed
+function saveAsPDF(e){
+        window.print();
+        e.preventDefault();
+}
+
+//Slide Table in first time Calculate is pressed
+function displayTable(e){
+    if(document.querySelector('.table-container').style.display === 'none'){
+        document.querySelector('.table-container').style.display='block';
+        document.querySelector('.save-pdf').style.display='block';
+
+        setTimeout(()=>{
+            document.querySelector('.table-container').style.opacity = 1;
+            document.querySelector('.table-container').style.transform = 'none';
+            document.querySelector('.save-pdf').style.opacity = 1;
+            document.querySelector('.save-pdf').style.transform = 'none';
+        },100)
+
+    }
+}
+
+//Setting the dimensions of the input table to the dimensions of the main table
+function setInputTableDimensions(){
+    document.querySelector('.input-1').style.width = `${document.querySelector('.week1').offsetWidth + 3}px`;
+    document.querySelector('.input-2').style.width = `${document.querySelector('.week2').offsetWidth + 3}px`;
+    document.querySelector('.input-3').style.width = `${document.querySelector('.week3').offsetWidth + 3}px`;
+    document.querySelector('.input-4').style.width = `${document.querySelector('.week4').offsetWidth + 3}px`;
+    document.querySelector('.input-5').style.width = `${document.querySelector('.week5').offsetWidth + 3}px`;
+    document.querySelector('.input-6').style.width = `${document.querySelector('.week6').offsetWidth + 3}px`;
+    document.querySelector('.input-7').style.width = `${document.querySelector('.week7').offsetWidth + 3}px`;
+    document.querySelectorAll('.grayed-out').forEach((gray)=>{
+        gray.style.width = `${document.querySelector('.flush').offsetWidth}px`;
+    })
+    document.querySelector('.input-8').style.width = `${document.querySelector('.week8').offsetWidth + 3}px`;
+    document.querySelector('.input-9').style.width = `${document.querySelector('.week9').offsetWidth + 3}px`;
+    document.querySelector('.input-10').style.width = `${document.querySelector('.week10').offsetWidth + 3}px`;
+    document.querySelector('.ec_target').style.width = `${document.querySelector('.product').offsetWidth + 3}px`;
+    document.querySelector('.input-unit').style.width = `${document.querySelector('.units-column').offsetWidth + 3}px`;
+
+
+
+}
+
+setInputTableDimensions();
+
+
+</script>
