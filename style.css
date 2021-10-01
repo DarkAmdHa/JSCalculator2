@@ -1,10 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
+.content * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-
+table * {
+  margin: 0;
+  padding: 0;
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
 /* Reduce width of scrollbars inside tables in case of overflow */
 .results::-webkit-scrollbar {
   width: 1px;
@@ -49,6 +55,8 @@ input {
 .header h1 {
   text-transform: uppercase;
   margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 1.2 !important;
 }
 
 #type {
@@ -397,10 +405,13 @@ td > table {
   /* Rotating the entire content */
   .content {
     transform: rotate(90deg);
-    margin-top: 25px;
+    margin-top: -50px;
   }
   #main-table > tbody > tr > td.results {
     min-width: 0px;
+  }
+  .navbar-container {
+    display: none;
   }
 
   #main-table,
