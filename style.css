@@ -5,19 +5,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Reduce width of scrollbars inside tables in case of overflow */
 .results::-webkit-scrollbar {
   width: 1px;
   height: 1px;
+}
+
+/* Removing up and down arrows from number input */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
 }
 
 table {
@@ -27,19 +29,12 @@ table {
   text-transform: uppercase;
 }
 
-th,
-.main-table-row-header {
+th {
   font-family: Industrial, sans-serif;
 }
 
 .main-table-row-header > * {
   font-family: inherit;
-}
-
-.product,
-.units-column {
-  font-weight: 500;
-  font-size: 23px;
 }
 
 input {
@@ -78,6 +73,7 @@ p {
   margin-left: 1rem;
   padding-bottom: 5px;
 }
+
 .save-pdf {
   opacity: 0;
   transform: translateX(-500px);
@@ -398,6 +394,7 @@ td > table {
   .table-container {
     overflow: visible;
   }
+  /* Rotating the entire content */
   .content {
     transform: rotate(90deg);
     margin-top: 25px;
