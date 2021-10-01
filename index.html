@@ -13,85 +13,89 @@
 </head>
 <body>
     
-    <div class="content"><div class="header">
-        <h1>Custom Feed Chart</h1>
-        <label for="type">1. Select Irrigation Method</label>
-        <select id="type" name="type" onchange='calculateValues()'>
-            <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
-            <option value="conc">Stock Concentrate (mL/Gal)</option>
-        </select>
-        <p style='margin-bottom:-5px'>2. Input Weekly EC Targets</p>
-    </div>
-        <div class='align-center'>
-        <div class="input-container">
-            <table class="input-table">
-                <tr class='main-table-row'>
-                    <th colspan="2"></th>
-                    <th colspan='3' class='bold'>Veg Cycle</th>
-                    <th colspan='9' class='bold'>Flower Cycle</th>
-                </tr>
-                <tr class='main-table-row input-row'>
-                    <td class='ec_target bold'>EC Targets</td>
-                    <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
-                    
-                    <td class='input-1 results dotted'>
-                        <input type="number" class='input veg1' placeholder='0'>
-                    </td>
-
-                    <td class='input-2 results dotted'>
-                        <input type="number" class='input veg2' placeholder='0'>
-                    </td>
-
-                    <td class='input-3 results'>
-                        <input type="number" class='input veg3' placeholder='0'>
-                    </td>
-
-                    <td class='input-4 results dotted'>
-                        <input type="number" class='input flow1' placeholder='0'>
-                    </td>
-
-                    <td class='input-5 results dotted'>
-                        <input type="number" class='input flow2' placeholder='0'>
-                    </td>
-                    <td class='input-6 results dotted'>
-                        <input type="number" class='input flow3' placeholder='0'>
-                    </td>
-    
-                    <td class='input-7 results'>
-                        <input type="number" class='input flow4' placeholder='0'>
-                    </td>
-
-                    <td class='grayed-out'></td>
-    
-                   
-                    <td class='input-8 results dotted'>
-                        <input type="number" class='input flow5' placeholder='0'>
-                    </td>
-
-                    <td class='input-9 results dotted'>
-                        <input type="number" class='input flow6' placeholder='0'>
-                    </td>
-
-                    <td class='input-10 results'>
-                        <input type="number" class='input flow7' placeholder='0'>
-                    </td>
-
-                    <td class='grayed-out'></td>
-    
-                </tr>
-            </table>
-    
+    <div class="content">
+        
+        <div class="header">
+            <h1>Custom Feed Chart</h1>
+            <label for="type">1. Select Irrigation Method</label>
+            <select id="type" name="type" onchange='calculateValues()'>
+                <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
+                <option value="conc">Stock Concentrate (mL/Gal)</option>
+            </select>
+            <p style='margin-bottom:-5px'>2. Input Weekly EC Targets</p>
         </div>
-        <button class="btn calculate_button">Calculate</button>
-    </div>
+
+        <div class='align-center'>
+            <div class="input-container">
+                <table class="input-table">
+                    <tr class='main-table-row'>
+                        <th colspan="2"></th>
+                        <th colspan='3' class='bold'>Veg Cycle</th>
+                        <th colspan='9' class='bold'>Flower Cycle</th>
+                    </tr>
+                    <tr class='main-table-row input-row'>
+                        <td class='ec_target bold'>EC Targets</td>
+                        <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        
+                        <td class='input-1 results dotted'>
+                            <input type="number" class='input veg1' placeholder='0'>
+                        </td>
+
+                        <td class='input-2 results dotted'>
+                            <input type="number" class='input veg2' placeholder='0'>
+                        </td>
+
+                        <td class='input-3 results'>
+                            <input type="number" class='input veg3' placeholder='0'>
+                        </td>
+
+                        <td class='input-4 results dotted'>
+                            <input type="number" class='input flow1' placeholder='0'>
+                        </td>
+
+                        <td class='input-5 results dotted'>
+                            <input type="number" class='input flow2' placeholder='0'>
+                        </td>
+                        <td class='input-6 results dotted'>
+                            <input type="number" class='input flow3' placeholder='0'>
+                        </td>
+        
+                        <td class='input-7 results'>
+                            <input type="number" class='input flow4' placeholder='0'>
+                        </td>
+
+                        <td class='grayed-out'></td>
+        
+                    
+                        <td class='input-8 results dotted'>
+                            <input type="number" class='input flow5' placeholder='0'>
+                        </td>
+
+                        <td class='input-9 results dotted'>
+                            <input type="number" class='input flow6' placeholder='0'>
+                        </td>
+
+                        <td class='input-10 results'>
+                            <input type="number" class='input flow7' placeholder='0'>
+                        </td>
+
+                        <td class='grayed-out'></td>
+        
+                    </tr>
+                </table>
+        
+            </div>
+
+            <button class="btn calculate_button">Calculate</button>
+        </div>
     
-    <div class='align-center'>
+        <div class='align-center'>
         <div class="table-container">
 
         <table id='main-table'>          
             <tr class='main-table-row main-table-row-header'>
-                <td class='product'>Product</td>
-                <td class='units-column'>Units</td>
+                <td class='product bold'>Product</td>
+                <td class='units-column bold'>Units</td>
                 <td class='week1'><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
                 <td class='week2'><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
                 <td class='week3'><span class='bold-digit'>3+</span><br><span class='small bold'>Week</span></td>
@@ -444,11 +448,8 @@
         </table> -->
     </div>
     <button class="save-pdf">Save As PDF</button>
+        </div>
     </div>
-    </div>
-    <div id="elementH"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src='app.js'></script>
 
