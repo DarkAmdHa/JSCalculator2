@@ -56,7 +56,7 @@ input {
 .header h1 {
   text-transform: uppercase;
   margin-bottom: 30px;
-  font-size: 32px;
+  font-size: 32px !important;
   line-height: 1.2 !important;
 }
 
@@ -278,11 +278,9 @@ td > table {
   padding: 0.25rem 1.4rem;
   font-weight: 400;
   letter-spacing: 0.5px;
-  border-color: #333;
   outline: none;
   transition: all 0.5s ease-out;
-  border-width: 2px solid #333;
-
+  border: 2px solid black;
 }
 
 .btn:hover,
@@ -401,6 +399,14 @@ td > table {
     justify-content: flex-start;
   }
 
+  body {
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+  }
   .input-container,
   .table-container {
     overflow: visible;
@@ -408,7 +414,6 @@ td > table {
   /* Rotating the entire content */
   .content {
     transform: rotate(90deg);
-    margin-top: -50px;
   }
   #main-table > tbody > tr > td.results {
     min-width: 0px;
