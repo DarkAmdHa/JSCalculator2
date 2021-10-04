@@ -98,12 +98,10 @@ p {
 #main-table,
 .input-table {
   border: 3px solid black;
-  width: 1065px;
+  width: 1055px;
   background: #fff;
 }
-#main-table {
-  margin-left: 5px;
-}
+
 
 #main-table > tbody > tr > td,
 .input-table > tbody > tr > td {
@@ -385,6 +383,21 @@ td > table {
   padding: 0 0.2rem;
 }
 
+.logo{
+    position: absolute;
+    background: black;
+    padding: 0.5rem 1.25rem;
+    border-radius: 60px;
+    width: 170px;
+    top: -20px;
+    left: 20px;
+    display: none;
+}
+
+.logo img{
+    width:100%;
+}
+
 @media (max-width: 768px) {
   .align-center {
     flex-direction: column;
@@ -399,7 +412,12 @@ td > table {
     visibility: hidden;
     display: none;
   }
-
+  .logo{
+      display: block;
+  }
+  .ec_target{
+      width: 280px !important;
+  }
   .align-center {
     display: block;
     justify-content: flex-start;
@@ -450,7 +468,9 @@ td > table {
 <body>
     
     <div class="content">
-        
+        <div class="logo">
+            <img src="logo.png" alt="Front Row Arg">
+        </div>
         <div class="header">
             <h1>Custom Feed Chart</h1>
             <label for="type">1. Select Irrigation Method</label>
@@ -465,13 +485,12 @@ td > table {
             <div class="input-container">
                 <table class="input-table">
                     <tr class='main-table-row'>
-                        <th colspan="2"></th>
+                        <th></th>
                         <th colspan='3' class='bold'>Veg Cycle</th>
                         <th colspan='9' class='bold'>Flower Cycle</th>
                     </tr>
                     <tr class='main-table-row input-row'>
                         <td class='ec_target bold'>EC Targets</td>
-                        <td class='input-unit bold'><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
                         
                         <td class='input-1 results dotted'>
                             <input type="number" class='input veg1' placeholder='0'>
@@ -1367,11 +1386,7 @@ function setInputTableDimensions(){
     document.querySelector('.input-8').style.width = `${document.querySelector('.week8').offsetWidth + 3}px`;
     document.querySelector('.input-9').style.width = `${document.querySelector('.week9').offsetWidth + 3}px`;
     document.querySelector('.input-10').style.width = `${document.querySelector('.week10').offsetWidth + 3}px`;
-    document.querySelector('.ec_target').style.width = `${document.querySelector('.product').offsetWidth + 3}px`;
-    document.querySelector('.input-unit').style.width = `${document.querySelector('.units-column').offsetWidth + 3}px`;
-
-
-
+    document.querySelector('.ec_target').style.width = `${document.querySelector('.product').offsetWidth+ document.querySelector('.units-column').offsetWidth + 7}px`;
 }
 
 setInputTableDimensions();
